@@ -21,18 +21,18 @@
 
 /* Reset
    ========================================================================== */
-@import "./_normalize.css";
+@import "normalize.css";
 /* Utilitaires
    ========================================================================== */
-@import "./_utilitaires.css";
+@import "utilitaires.css";
 
 /* Charte typographique
    ========================================================================== */
-@import "./_typo.css";
+@import "typo.css";
 
 /* Système de grille fluide
    ========================================================================== */
-@import "./_grille.css";
+@import "grille.css";
 
 
 /* Styles de base
