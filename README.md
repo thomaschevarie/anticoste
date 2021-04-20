@@ -11,6 +11,8 @@ Le site sera mis en ligne au mois de juin 2021 sous le nom de domaine __Anticost
 
 [Documentation pour étudiant.e.s](_docs/CONTRIBUER.md)
 
+[Lien vers le portail du projet](https://evefevrier.github.io/anticoste/)
+
 ## Crédits
 ### Une oeuvre de Richard Baillargeon 
 #### assisté de Audrey Lahaie et Sévryna Martel-Lupien
