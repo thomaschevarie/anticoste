@@ -63,15 +63,18 @@ git push origin main
 
 
 ## Faire un Pull Request 
-Faire tout d'abord les sauvegardes locales   
-et pousser sur le Github personnel les modifications  
-tel qu'indiqué dans la __routine de travail__
+1.	Accomplir d'abord la __routine de travail__ en vérifiant bien les réponses du terminal pour vous assurer que chaque commande est exécutée.  
+2.	Dans l'interface de Github, dans le répertoire personnel du projet, cliquer le bouton *Pull Requests*.
+3.	Cliquer le bouton *New Pull Request*  
+      ![capture-ecran-01](./01-cliquer-btn-pull-request.png)  
+4.	Choisir base : evefevrier/anticoste : __developp-a__ ou __developp-b__     
+      *Selon votre groupe! Groupe 1: developp-a et groupe 2: developp-b*  
+      Choisir head : UTILISATEUR/anticoste compare: main  
+      ![capture-ecran-01](./02-choisir-base-et-head.png)  
+5.	Cliquer le bouton *Create Pull Request*
+6.	Donner un titre à votre *Pull Request*, puis,  
+      cliquer le bouton *Confirm Pull Request*.
 
-Dans l'interface de Github, dans le répertoire personnel du projet,  
-cliquer le bouton __Pull Requests__  
-cliquer le bouton __New pull request__  
-choisir comme base __evefevrier/anticoste__ : *developp-a* ou *developp-b*  
-choisir comme head __UTILISATEUR/anticoste__ : main
 
 
 ## Bogues et améliorations suggérés
