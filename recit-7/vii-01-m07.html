@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Adapter le titre -->
-    <title>Titre récit - Page X de XX - Anticoste - M00</title>
+    <title>Des pas et des prises - Page 01 de 32 - Anticoste - M07</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m07 -->
     <link rel="stylesheet" href="../css/styles-m07.css">
 </head>
-<!-- sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 -->
-<body class="texte m07">
+<!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
+<body class="photo m07">
 
 <!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
 <!-- Bandeau d'entête incluant menu principal -->
@@ -35,15 +35,16 @@
 <!-- FIN bandeau -->
 
 <main class="conteneur rangee">
-    <section class="texte__contenu cols_9_de_12">
-        <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dicta dolores iusto labore maxime molestias?
-            </p>
-        </blockquote>
-        <p class="texte__infos">
-            At consequatur cumque dolorum esse facere hic iste, magnam nam officia, perspiciatis quas sunt.
-        </p>
-    </section>
+    <figure>
+        <picture class="picture__tag">
+            <source srcset="https://picsum.photos/id/12/1200/800"/>
+            <img src="https://picsum.photos/id/12/1200/800" alt="">
+        </picture>
+        <figcaption>
+            <h1 class="h4">Identification de la source</h1>
+            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+        </figcaption>
+    </figure>
 </main>
 
 <!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
@@ -54,16 +55,16 @@
         <ul class="nav__list">
             <li class="nav__listItem">
                 <a class="nav__link switch"
-                   href="../rose-des-vents/m07.html">
+                   href="../recit-7/index-m07.html">
                     <span aria-hidden="true">&lt;</span>
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
             <li class="nav__listItem">
-                <span class="pagination">Récit I - page 1 de 14</span>
+                <span class="pagination">Récit VII - page 1 de 32</span>
             </li>
             <li class="nav__listItem">
                 <a class="nav__link switch"
-                   href="../recit-1/i-01-m07.html">
+                   href="../recit-7/vii-04-m07.html">
                     <span class="screen-reader-only">Suivant</span>
                     <span aria-hidden="true">&gt;</span></a>
             </li>

@@ -7,9 +7,10 @@
  * Charte typographique
  * Styles de base
  * Grille de mise en page
- * Navigations
+ * Navigations de l'interface (bandeau + pied)
  *** Niveau 1 - Accueil
  *** Niveau 1 - Rose des vents
+ ****** navigation vers les récits
  *** Niveau 1 - Crédits
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
@@ -19,39 +20,255 @@
 /* Charte typographique
    ========================================================================== */
 
-
 /* Styles de base
    ========================================================================== */
-
-
-/* Navigations
-   ========================================================================== */
-
+body{
+    color: aliceblue;
+    background-color: #000;
+}
+blockquote{
+    margin:0;
+}
 
 /* Grille de mise en page
    ========================================================================== */
-/* Niveau 1 - Accueil
-   ====================== */
+body{
+    display: flex;
+    flex-flow:column wrap;
+    min-height: 100vh;
+}
+main.conteneur{
+    min-height: 80vh;
+    min-width: 375px;
+}
+header,
+footer {
+    color: aliceblue;
+    background-color: rgba(50,50,50,1);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+footer {
+    bottom: 0;
+}
+header{
+    top: 0;
+}
+/* Navigations de l'interface (bandeau + pied)
+   ========================================================================== */
+/* commun aux différentes navigations - balises nav>ul.nav__list */
+.nav__list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
 
+/* navigations menu principal*/
+.nav--menu .nav__list {
+    display: flex;
+    justify-content: center;
+    margin:0;
+}
 
+.nav--menu .nav__link {
+    color: aliceblue;
+    display: inline-block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-bottom: 5px solid transparent;
+}
+@media (min-width: 600px) {
+    .nav--menu .nav__link {
+        font-size: 1.6rem;
+        margin: 0 2rem;
+    }
+}
+.nav--menu .nav__link:hover {
+    text-decoration: underline;
+}
+.nav--menu .switch:hover {
+    transform: scale(2.25);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.nav--menu .nav__link--active {
+    color:#ecf4f8;
+    border-bottom: 5px solid #ecf4f8;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgb(236,244,248);
+    /* tests et code du dégradé faits avec https://cssgradient.io/ */
+    background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);
+    /*background-color: #434343;*/
+}
+.pagination{
+    display: inline-block;
+    margin:1rem;
+}
 /* Niveau 1 - Rose des vents
-   ====================== */
+   ================== */
+.rose-des-vents {
+    background-image: url("../images/m99/carte-navigation_1200.jpg");
+    background-size: cover;
+}
+.rose-des-vents .conteneur{
+    padding-top:70px;
+}
+/* navigation vers les récits */
+.nav--recits {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+@media (min-width: 600px) {
+    .nav--recits {
+        display: flex;
+        justify-content: center;
+    }
+}
+.nav--recits .nav__list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 13%;
+    min-height: 60vh;
+}
+@media (min-width: 600px) {
+    .nav--recits .nav__list {
+        min-height: auto;
+        padding-left: 0;
+        margin-right: 2%;
+    }
+}
 
+.nav--recits picture {
+    position: absolute;
+    top: 200px;
+    opacity: 0.25;
+}
 
-/* Niveau 1 - Crédits
-   ====================== */
+@media (min-width: 600px) {
+    .nav--recits picture {
+        position: static;
+        opacity: 0.85;
+    }
+}
 
+.nav--recits .nav__link {
+    color: #c8a78c;
+    text-decoration: none;
+    display: block;
+    padding-right: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+    min-width: 30rem;
+    text-align: right;
+    line-height: 3rem;
+}
+
+.nav--recits .nav__link:hover {
+    text-decoration: underline;
+    color: #b22a2a; /* la dominante dans la main */
+    font-size: 2.15rem;
+    background-image: url("../images/m99/main.png");
+    background-position: right;
+    background-size: 3.5rem;
+    background-repeat: no-repeat;
+    transition: font-size 0.3s;
+}
 
 /* Niveau 2 - Gabarit page Titre
-   ====================== */
-
-
+   ========================================================================== */
+.titre .rangee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titre h1{
+    font-size:5vh;
+    padding-top: 5rem;
+}
+@media (min-width: 600px) {
+    .titre h1{
+        font-size:10vh;
+        padding: 0;
+    }
+}
+.video__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 /* Niveau 2 - Gabarit page Photo
-   ====================== */
-
+   ========================================================================== */
+.photo img{
+    /*max-width: 90%;*/
+}
+figure{
+    position: relative;
+    margin:0;
+}
+.photo figure{
+    margin-bottom:10rem;
+}
+.photo figcaption {
+    color: aliceblue;
+    background-color: #434343;
+    padding: 2rem;
+}
+@media (min-width: 600px) {
+    .photo figcaption {
+        position: absolute;
+        width:100%;
+        bottom:0;
+        opacity:0;
+    }
+    .photo figcaption:hover {
+        opacity:0.85;
+        transition: opacity 0.5s;
+        cursor: help;
+    }
+}
 
 /* Niveau 2 - Gabarit page Texte
-   ====================== */
-
-
-
+   ========================================================================== */
+.texte{
+    background-image: url("../demo-recit/images/i-txt-m99.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.texte .rangee{
+    justify-content: center;
+    align-items: center;
+    color:#000;
+}
+.texte__contenu{
+    padding: 70px 2rem;
+    font-size:1.8rem;
+}
+@media (min-width: 600px) {
+    .texte__contenu{
+        font-size:2.1rem;
+    }
+}
+.texte__infos{
+    color: aliceblue;
+    background-color: #434343;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+@media (min-width: 600px) {
+    .texte__infos{
+        color: transparent;
+        background-color:transparent;
+        cursor: help;
+    }
+    .texte__infos:hover{
+        color: black;
+        transition:color 0.5s;
+    }
+}
