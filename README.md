@@ -9,8 +9,9 @@ Le projet sera l’occasion d’expérimenter le travail collaboratif à l’aid
 les *pull request* et les *issues* feront partie de votre vocabulaire courant.  
 Le site sera mis en ligne au mois de juin 2021 sous le nom de domaine __Anticoste.ca__.
 
-## Documentation 
-[Contribuer](docs/CONTRIBUER.md)
+[Documentation pour étudiant.e.s](_docs/CONTRIBUER.md)
+
+[Lien vers le portail du projet](https://evefevrier.github.io/anticoste/)
 
 ## Crédits
 ### Une oeuvre de Richard Baillargeon 

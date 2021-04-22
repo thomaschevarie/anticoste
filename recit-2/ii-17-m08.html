@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Adapter le titre -->
-    <title>Nom Page - Nom section - Nom projet - Mandat</title>
+    <title>Titre récit - Page X de XX - Anticoste - M00</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m99 -->
     <link rel="stylesheet" href="../css/styles-m99.css">
 </head>
-<!-- Ajuster le nom de classe m99 pour correspondre à votre mandat m01 à m26 -->
-<body class="">
-<!-- Bandeau d'entête incluant menu principal -->
-<!-- Adapter selon mandat les liens aux lignes 23-26-29-->
+<!-- sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 -->
+<body class="texte m99">
+
+<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
 <header role="banner">
     <nav class="nav nav--menu" role="navigation">
         <ul class="nav__list">
@@ -30,27 +30,25 @@
         </ul>
     </nav>
 </header>
-<!-- FIN bandeau -->
-
-<main role="main"
-      class="conteneur">
-
-    <!-- Pour le niveau 1
-        voir les exemples m99.html dans les dossiers accueil, rose-des-vents et credits -->
-
-    <!-- Pour le niveau 2
-        voir les gabarits titre.html, photo.html et texte.html -->
-
+<main class="conteneur rangee">
+    <section class="texte__contenu cols_9_de_12">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dicta dolores iusto labore maxime molestias?
+            </p>
+        </blockquote>
+        <p class="texte__infos">
+            At consequatur cumque dolorum esse facere hic iste, magnam nam officia, perspiciatis quas sunt.
+        </p>
+    </section>
 </main>
 
-<!-- Pied de page dans les récits -->
-<!-- Adapter les liens et le contenu du span.pagination selon #récit et #page -->
+<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
 <footer role="contentinfo">
     <nav class="nav nav--menu" role="navigation">
         <ul class="nav__list">
             <li class="nav__listItem">
                 <a class="nav__link switch"
-                   href="../rose-des-vents/m99.html">
+                   href="../recit-2/ii-16-m08.html">
                     <span aria-hidden="true">&lt;</span>
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
@@ -59,13 +57,12 @@
             </li>
             <li class="nav__listItem">
                 <a class="nav__link switch"
-                   href="../recit-1/i-01-m99.html">
+                   href="../recit-2/ii-18-m08.html">
                     <span class="screen-reader-only">Suivant</span>
                     <span aria-hidden="true">&gt;</span></a>
             </li>
         </ul>
     </nav>
 </footer>
-<!-- FIN pied de page dans les récits -->
 </body>
 </html>
