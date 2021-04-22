@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Adapter le titre -->
+    <title>Récit # - Anticoste - Mandat</title>
+    <!-- Feuille de styles commune à tous -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Ajuster le href pour pointer sur la feuille de styles
+    du mandat en changeant le suffixe m07 -->
+    <link rel="stylesheet" href="../css/styles-m07.css">
+</head>
+<!-- sur <body>: classe titre + nom de classe pour correspondre à votre mandat m01 à m13 -->
+<body class="titre m07">
+
+<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+<!-- Bandeau d'entête incluant menu principal -->
+<!-- Adapter selon mandat les liens aux lignes 23-26-29-->
+<header role="banner">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../accueil/m07.html">Anticoste</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../rose-des-vents/m07.html">Rose&#8239;des&#8239;vents</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../credits/m07.html">Crédits</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- FIN bandeau -->
+
+<main class="conteneur rangee">
+<!--titre du récit-->
+<h1>Des pas et des prises</h1>
+<!--integration d'une animation vidéo-->
+<video class="video__tag" autoplay loop muted preload="metadata">
+    <source src="../images/m07/test.mp4" type="video/mp4">
+    Votre navigateur ne prends pas en charge la balise video.
+</video>
+</main>
+
+<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
+<!-- Pied de page dans les récits -->
+<!-- Adapter les liens et le contenu du span.pagination selon #récit et #page -->
+<footer role="contentinfo">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link switch"
+                   href="../rose-des-vents/m07.html">
+                    <span aria-hidden="true">&lt;</span>
+                    <span class="screen-reader-only">Précédent</span></a>
+            </li>
+            <li class="nav__listItem">
+                <span class="pagination">Récit I - page 1 de 14</span>
+            </li>
+            <li class="nav__listItem">
+                <a class="nav__link switch"
+                   href="../recit-1/i-01-m07.html">
+                    <span class="screen-reader-only">Suivant</span>
+                    <span aria-hidden="true">&gt;</span></a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+<!-- FIN pied de page dans les récits -->
+
+</body>
+</html>
