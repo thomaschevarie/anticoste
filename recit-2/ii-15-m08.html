@@ -33,12 +33,15 @@
 <main class="conteneur rangee">
     <figure>
         <picture class="picture__tag">
-            <source srcset="https://picsum.photos/id/12/1200/800"/>
-            <img src="https://picsum.photos/id/12/1200/800" alt="">
+            <source media="(max-width: 600px)"
+            srcset="images/ii-15-m08_600.jpg 1x, images/ii-15-m08_1200.jpg 2x">
+            <source media="(max-width: 601px)"
+                    srcset="images/ii-15-m08_1200.jpg 1x, images/ii-15-m08_2400.jpg 2x">
+            <img src="images/ii-15-m08_1200.jpg" alt="">
         </picture>
         <figcaption>
-            <h1 class="h4">Identification de la source</h1>
-            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+            <h1 class="h4">Pointe de l’Est, Christophe Hubert et sa famille,</h1>
+            <p>Photo, Frère Marie-Victorin, 1925, Archives de l’Université de Montréal (E 01181FP3659)</p>
         </figcaption>
     </figure>
 </main>
@@ -49,12 +52,12 @@
         <ul class="nav__list">
             <li class="nav__listItem">
                 <a class="nav__link switch"
-                   href="../recit-2/index-m08.html.html">
+                   href="../recit-2/index-m08.html">
                     <span aria-hidden="true">&lt;</span>
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
             <li class="nav__listItem">
-                <span class="pagination">Récit II - page 15 à 30</span>
+                <span class="pagination">Récit II - page 15 à 29</span>
             </li>
             <li class="nav__listItem">
                 <a class="nav__link switch"
