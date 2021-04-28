@@ -13,6 +13,21 @@
 </head>
 <!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
 <body class="photo m05">
+  <header role="banner">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../accueil/m05.html">Anticoste</a></li>
+            <li class="nav__listItem icon--rose">
+                <a class="nav__link nav__link--active"
+                   href="../rose-des-vents/m05.html"></a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../credits/m05.html">Crédits</a></li>
+        </ul>
+    </nav>
+  </header>
 
 <!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
 
@@ -25,7 +40,7 @@
             <source
                     media="(min-width: 601px)"
                     srcset="../recit-5/images/v-01-m05_1200.jpg 1x, ../recit-5/images/v-01-m05_2400.jpg 2x">
-            <img src="../recit-5/images/v-01-m05_600.jpg"
+            <img src="../recit-5/images/v-01-m05_1200.jpg"
                  alt="">
         </picture>
         <figcaption>
@@ -40,20 +55,19 @@
 <footer role="contentinfo">
     <nav class="nav nav--menu" role="navigation">
         <ul class="nav__list">
-            <li class="nav__listItem">
+            <li class="nav__listItem icon--precedent">
                 <a class="nav__link switch"
                    href="../rose-des-vents/m99.html">
-                    <span aria-hidden="true">&lt;</span>
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
             <li class="nav__listItem">
                 <span class="pagination">Récit V - page 1 de 17</span>
             </li>
-            <li class="nav__listItem">
+            <li class="nav__listItem icon--suivant">
                 <a class="nav__link switch"
                    href="v-02-m05.html">
                     <span class="screen-reader-only">Suivant</span>
-                    <span aria-hidden="true">&gt;</span></a>
+
             </li>
         </ul>
     </nav>

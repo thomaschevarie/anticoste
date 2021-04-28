@@ -25,6 +25,7 @@
 
 /* Polices */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
 h1,
 .h1,
@@ -33,8 +34,10 @@ h2,
 h3,
 .h3,
 h4,
-.h4 {
-    font-family: Roboto, sans-serif ;
+.h4,
+.texte__contenu,
+.pagination{
+    font-family: "Source Serif Pro", sans-serif ;
 }
 body{
     font-family: Roboto, sans-serif ;
