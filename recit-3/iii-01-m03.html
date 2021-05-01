@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Adapter le titre -->
-    <title>Titre récit - Page X de XX - Anticoste - M00</title>
+    <title>Récit 3 Cimetière du Golfe - Page 1 de 30 - Anticoste - M03</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
@@ -34,12 +34,16 @@
 <main class="conteneur rangee">
     <figure>
         <picture class="picture__tag">
-            <source srcset="https://picsum.photos/id/12/1200/800"/>
-            <img src="https://picsum.photos/id/12/1200/800" alt="">
+            <source media="(max-width:600px)"
+                    srcset="images/iii-01-m03_600.jpg 1x, images/iii-01-m03_1200.jpg 2x">
+            <source media="(min-width:601px)"
+                    srcset="images/iii-01-m03_1200.jpg 1x, images/iii-01-m03_2400.jpg 2x">
+            <img class="picture__img" src="images/iii-01-m03_600.jpg" alt="">
         </picture>
         <figcaption>
-            <h1 class="h4">Identification de la source</h1>
-            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+            <h1 class="h4">Récits de naufrages - 1829 - 1902, couverture du manuscrit de Placide Vigneau (1842-1926),
+                gardien du phare de l’ïle aux Perroquets</h1>
+            <p>Fonds Placide Vigneau (P48, S1, D2.6), Bibliothèque et archives nationales du Québec</p>
         </figcaption>
     </figure>
 </main>
