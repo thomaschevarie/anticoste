@@ -9,6 +9,34 @@
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m99 -->
     <link rel="stylesheet" href="../css/styles-m99.css">
+    <style>
+        /* Styles pour le bouton "fullscreen"
+        /* icones: https://fontawesome.com/license */
+        .fullscreen {
+            display: none;
+        }
+        @media(min-width: 600px){
+            .fullscreen {
+                display: inline-block;
+                margin: 0.75rem;
+                margin-left: auto;
+            }
+            .icon{
+                display: block;
+                width: 1em;
+                height: 1em;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .icon--fullscreen{
+                background-image: url("images/fullscreen.svg");
+            }
+            .icon--normalscreen{
+                background-image: url("images/normalscreen.svg");
+            }
+        }
+
+    </style>
 </head>
 <body class="titre m99">
 <!-- Bandeau d'entête incluant menu principal adapté pour mandat m99-->
@@ -23,7 +51,13 @@
                    href="../rose-des-vents/m99.html">Rose&#8239;des&#8239;vents</a></li>
             <li class="nav__listItem">
                 <a class="nav__link"
-                   href="../credits/m99.html">Crédits</a></li>
+                   href="../credits/m99.html">À propos</a></li>
+            <li class="nav__listItem fullscreen">
+                <button class="fullscreen__button">
+                    <span class="fullscreen__text screen-reader-only">⇱ FullScreen</span>
+                    <span class="icon icon--fullscreen" aria-hidden="true"></span>
+                </button>
+            </li>
         </ul>
     </nav>
 </header>
@@ -57,6 +91,7 @@
         </ul>
     </nav>
 </footer>
+<script src="../js/toggleFullScreen.js"></script>
 <!-- FIN pied de page dans les récits -->
 </body>
 </html>
