@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Adapter le titre -->
+    <title>Titre récit - Page X de XX - Anticoste - M00</title>
+    <!-- Feuille de styles commune à tous -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Ajuster le href pour pointer sur la feuille de styles
+    du mandat en changeant le suffixe  -->
+    <link rel="stylesheet" href="../css/styles-m03.css">
+</head>
+<!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
+
+<body class="photo m03">
+
+<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+<header role="banner">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../accueil/m03.html">Anticoste</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../rose-des-vents/m03.html">Rose&#8239;des&#8239;vents</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../credits/m03.html">Crédits</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="conteneur rangee">
+    <figure>
+        <picture class="picture__tag">
+            <source srcset="https://picsum.photos/id/12/1200/800"/>
+            <img src="https://picsum.photos/id/12/1200/800" alt="">
+        </picture>
+        <figcaption>
+            <h1 class="h4">Identification de la source</h1>
+            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+        </figcaption>
+    </figure>
+</main>
+
+<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
+<footer role="contentinfo">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link switch"
+                   href="index-m03.html">
+                    <span aria-hidden="true">&lt;</span>
+                    <span class="screen-reader-only">Précédent</span></a>
+            </li>
+            <li class="nav__listItem">
+                <span class="pagination">Récit III - page 1 de 30</span>
+            </li>
+            <li class="nav__listItem">
+                <a class="nav__link switch"
+                   href="iii-04-m03.html">
+                    <span class="screen-reader-only">Suivant</span>
+                    <span aria-hidden="true"></span></a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
