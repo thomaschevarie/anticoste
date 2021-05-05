@@ -1,3 +1,33 @@
+/** VARIABLES À AJOUTER **/
+/** developp-a **/
+/** Style amelielarouche [m05] **/
+/** Style camillemarceau07 [m07] **/
+
+/** developp-b **/
+/** Style Daphneemartel [m15] **/
+/** Style itsoliroy [m20] **/
+
+:root{
+    /** Démo variables [m99] **/
+    /* les caractères */
+    --m99-fonte-principale: 'Libre Franklin', sans-serif;
+    --m99-fonte-ancienne:'Libre Baskerville', serif;
+    /* les couleurs */
+    --m99-couleur-background: rgba(50, 50, 50, 0.9);
+    --m99-couleur-principale: aliceblue;
+    /* les tailles */
+    --m99-fontSize-interface-small: 1.6rem;
+    --m99-fontSize-interface-large: 1.8rem;
+    --m99-fontSize-recit-texte-small: 2.2rem;
+    --m99-fontSize-recit-texte-large: 2.6rem;
+    --m99-fontSize-recit-legende-small: 1.8rem;
+    --m99-fontSize-recit-legende-large: 2rem;
+    --m99-fontSize-recit-titre-small: 2rem;
+    --m99-fontSize-recit-titre-large: 2.4rem;
+    /* bordures, coins ronds, divers */
+    --m99-borderRadius: 10px;
+}
+
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
 html {
     box-sizing: border-box;
