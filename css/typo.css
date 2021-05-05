@@ -25,6 +25,7 @@
 
 /* Polices */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
 
 h1,
 .h1,
@@ -34,10 +35,10 @@ h3,
 .h3,
 h4,
 .h4 {
-    font-family: Roboto, sans-serif ;
+    font-family: var(--m99-titreSite-fonte);
 }
 body{
-    font-family: Roboto, sans-serif ;
+    font-family: var(--m99-fonte-principale);
 }
 
 
