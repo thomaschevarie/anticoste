@@ -19,6 +19,84 @@
 
 /* Charte typographique
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Serif+TC:wght@500&display=swap');
+
+h1,
+.h1,
+h2,
+.h2,
+.pagination{
+    font-family: 'Noto Serif TC', serif;
+}
+.nav--menu,
+.texte__contenu,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Base décimale */
+
+/*body {
+    !* 16px pour toutes les largeurs d'écran *!
+    font-size: 1.6rem;
+    !* facteur multiplicateur de la taille de la police 1.375x16 = 22 *!
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}*/
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1,
+.h1 { /* = 50px */
+    font-size: 5rem;
+}
+@media (min-width: 600px) {
+    h1,
+    .h1 { /* = 150px */
+        font-size: 15rem;
+    }
+}
+h2,
+.h2 { /* = 18px */
+    font-size: 1.8rem;
+}
+@media (min-width: 600px) {
+    h2,
+    .h2 { /* = 35px */
+        font-size: 3.5rem;
+    }
+}
+
+.pagination { /* = 16px */
+    font-size: 1.6rem;
+}
+@media (min-width: 600px) {
+
+    .pagination { /* = 35px */
+        font-size: 3.5rem;
+    }
+}
+.pagination__numero { /* = 14px */
+    font-size: 1.4rem;
+}
+@media (min-width: 600px) {
+
+    .pagination__numero { /* = 20px */
+        font-size: 2rem;
+    }
+}
+.nav--menu { /* = 20px */
+    font-size: 2rem;
+}
 
 /* Styles de base
    ========================================================================== */
@@ -110,7 +188,7 @@ header{
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m99/carte-navigation_1200.jpg");
+    background-image: url("../images/m08/arrierePlan_rose_des_vents_1440.jpg");
     background-size: cover;
 }
 .rose-des-vents .conteneur{
@@ -118,8 +196,8 @@ header{
 }
 /* navigation vers les récits */
 .nav--recits {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: Bold;
 }
 @media (min-width: 600px) {
     .nav--recits {
@@ -205,6 +283,11 @@ header{
 }
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
+.photo{
+    background-image: url("../images/m08/arrierePlan_global_1440.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .photo img{
     /*max-width: 90%;*/
 }
@@ -237,7 +320,7 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m99.jpg");
+    background-image: url("../images/m08/arrierePlan_global_1440.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -252,7 +335,7 @@ figure{
 }
 @media (min-width: 600px) {
     .texte__contenu{
-        font-size:2.1rem;
+        font-size:3.5rem;
     }
 }
 .texte__infos{
