@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Adapter le titre -->
-    <title>Nés sur le reef - Page 3 de 17 - Anticoste - M05</title>
+    <title>Nés sur le reef - Page 7 de 17 - Anticoste - M05</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m99 -->
     <link rel="stylesheet" href="../css/styles-m05.css">
 </head>
-<!-- sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 -->
-<body class="texte m05">
+<!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
+<body class="photo m05">
   <header role="banner">
     <nav class="nav nav--menu" role="navigation">
         <ul class="nav__list">
@@ -32,18 +32,23 @@
 <!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
 
 <main class="conteneur rangee">
-    <section class="texte__contenu cols_9_de_12">
-        <blockquote>
-            <p>Les habitants sont tous, sauf une seule exception, de simples tenanciers payant à titre de loyer,
-                une capitation par famille, qui a surtout pour objet de conserver à la possession de l’île son
-                caractère de propriété privée. Les anciens seigneurs s’étaient toujours refusés à aliéner une
-                partie quelconque du territoire de l’ile et même à consentir des baux à longue échéance.
-            </p>
-        </blockquote>
-        <p class="texte__infos">
-            Jules Despescher. Notice sur l’île d’Anticosti, Paris (édition privée),1895, p. 13
-        </p>
-    </section>
+    <figure>
+        <picture>
+            <source
+                    media="(max-width: 600px)"
+                    srcset="../recit-5/images/v-07-m05_600.jpg 1x, ../recit-5/images/v-07-m05_1200.jpg 2x">
+            <source
+                    media="(min-width: 601px)"
+                    srcset="../recit-5/images/v-07-m05_1200.jpg 1x, ../recit-5/images/v-07-m05_2400.jpg 2x">
+            <img src="../recit-5/images/v-07-m05_1200.jpg"
+                 alt="">
+        </picture>
+        <figcaption>
+            <h1 class="h4">Un pêcheur de flétan et les enfants à Anticosti</h1>
+            <p>BAnQ-Québec / P388, D2, P96 / Fonds de la famille Lucien Comettant
+                / Anticosti / Auteur non identifié, vers 1900</p>
+        </figcaption>
+    </figure>
 </main>
 
 <!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
@@ -52,16 +57,17 @@
         <ul class="nav__list">
             <li class="nav__listItem icon--precedent">
                 <a class="nav__link switch"
-                   href="../recit-5/v-02-m05.html">
+                   href="../rose-des-vents/m99.html">
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
             <li class="nav__listItem">
-                <span class="pagination">Récit V - page 3 de 17</span>
+                <span class="pagination">Récit V - page 7 de 17</span>
             </li>
             <li class="nav__listItem icon--suivant">
                 <a class="nav__link switch"
-                   href="../recit-5/v-06-m05.html">
+                   href="v-08-m05.html">
                     <span class="screen-reader-only">Suivant</span>
+
             </li>
         </ul>
     </nav>
