@@ -14,12 +14,43 @@
  *** Niveau 1 - Crédits
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
- *** Niveau 2 - Gabarit page Texte
+ *** Niveau 2 - Gabarit page Textes
  */
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Della+Respira&display=swap');
+
+:root {
+    /** Style camillemarceau07 [m07] **/
+    /* les caractères */
+    --m07-font-titre: 'Della Respira', serif;
+    --m07-font-principale: 'Arsenal', sans-serif;
+    --m07-font-ancienne: 'Della Respira', serif;
+    /* les couleurs */
+    --m07-noir: #1e1e1e;
+    --m07-vert: #3d4236;
+    --m07-gold: #996a0f;
+    --m07-beige: #e0d7c6;
+    --m07-blanc: #ffffff;
+    /* les tailles */
+    --m07-fontSize-interface-small: 1.6rem;
+    --m07-fontSize-interface-large: 1.8rem;
+    --m07-fontSize-recit-texte-small: 1.6rem;
+    --m07-fontSize-recit-texte-large: 2.8rem;
+    --m07-fontSize-recit-legende-small: 1.4rem;
+    --m07-fontSize-recit-legende-large: 2rem;
+    --m07-fontSize-recit-titre-small: 1.6rem;
+    --m07-fontSize-recit-titre-large: 2.4rem;
+    --m07-fontSize-h1-small: 5rem;
+    --m07-fontSize-h1-large: 11rem;
+    --m07-fontSize-accueil-h2-small: 5rem;
+    --m07-fontSize-accueil-h2-large: 9rem;
+    --m07-fontSize-credits-h2-small: 3rem;
+    --m07-fontSize-credits-h2-large: 3rem;
+    /* ombre */
+    --m07-ombre: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
 
 /* Charte typographique
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Della+Respira&display=swap');
 
 h1,
 .h1,
