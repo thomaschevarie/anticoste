@@ -311,20 +311,20 @@ figure {
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte {
-    background-image: url("../demo-recit/images/i-txt-m99_600.jpg");
+    background-image: url("../demo-recit/images/i-txt-m99.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 @media (min-width: 600px) {
     .texte {
-        background-image: url("../demo-recit/images/i-txt-m99_1000.jpg");
+        /*background-image: url("../demo-recit/images/i-txt-m99_1000.jpg");*/
     }
 }
 
 @media (min-width: 1000px) {
     .texte {
-        background-image: url("../demo-recit/images/i-txt-m99_2000.jpg");
+        /*background-image: url("../demo-recit/images/i-txt-m99_2000.jpg");*/
     }
 }
 
