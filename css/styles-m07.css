@@ -96,7 +96,8 @@ body {
 /* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
 h1,
 .h1 { /* = 50px */
-    font-size: 50rem;
+    font-size: 5rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h1,
@@ -113,18 +114,19 @@ h1,
 
 h2,
 .h2 { /* = 30px */
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h2,
     .h2 { /* = 30px */
-        font-size: 3rem;
+        font-size: 9rem;
     }
 }
 @media (min-width: 800px) {
     h2,
     .h2 { /* = 30px */
-        font-size: 3rem;
+        font-size: 9rem;
     }
 }
 
@@ -196,8 +198,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-header,
-footer {
+header {
     position: fixed;
     width: 100%;
     z-index: 5;
@@ -439,4 +440,139 @@ figure{
         transition:color 0.5s;
 
     }
+}
+
+/* Niveau 1 - Accueil
+   ================== */
+
+.entete__accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 8rem;
+}
+
+.intro {
+    background-color: var(--m07-vert);
+    box-shadow: var(--m07-ombre);
+    margin-top: -1rem;
+    padding-bottom: 7rem;
+    padding-top: 5rem;
+}
+
+.texteIntro__accueil, .titre__accueil {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 599px) {
+    .intro {
+        background-image: url("../images/m07/main_accueil_320.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+}
+
+@media (min-width: 600px) {
+    .intro {
+        background-image: url("../images/m07/main_accueil_700.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        box-shadow: var(--m07-ombre);
+    }
+    .intro .rangee {
+        flex-direction: column;
+        padding-bottom: 7rem;
+    }
+
+    .titre__accueil {
+        margin-left: 25.5%;
+    }
+
+    .texteIntro__accueil {
+        margin-left: 51%;
+        margin-top: -8rem;
+    }
+}
+
+.septRecitsNum {
+    color: var(--m07-vert);
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    background-image: url("../images/m07/fond_septRecits_accueil_1200.jpg");
+    background-size: cover;
+}
+
+.titre__septRecisNum, .p__septRecisNum {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.titre__septRecisNum {
+    line-height: 92%;
+}
+
+.photoSeptRecits {
+    background-image: url("../images/m07/septRecits_accueil_1000.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 43rem;
+    padding-top: 7rem;
+    box-shadow: var(--m07-ombre);
+    margin-top: 5rem;
+}
+
+.recits__list {
+    font-family: 'Della Respira', serif;
+    font-weight: normal;
+    line-height: 187%;
+    font-size: 1.4rem;
+    letter-spacing: 0.25em;
+    list-style: none;
+    color: var(--m07-blanc);
+    margin-left: -2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--m07-vert);
+}
+
+@media (min-width: 600px) {
+
+    .septRecitsNum {
+        padding-bottom: 10rem;
+        padding-top: 10rem;
+    }
+
+    .titre__septRecisNum {
+        margin-top: -1rem;
+        text-align: right;
+    }
+
+    .photoSeptRecits {
+        height: 60rem;
+        margin-top: 5rem;
+    }
+
+    .recits__list {
+        margin-top: 10rem;
+        position: absolute;
+        right: 0;
+        padding-left: 10rem;
+        width: 60%;
+    }
+
+}
+
+.experieneImmersive {
+    background-color: var(--m07-noir);
+    padding-top: 2rem;
+}
+
+.texteExpImm__accueil {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.titreExpImm__accueil {
+    line-height: 92%;
 }
