@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Adapter le titre -->
+    <title>Nés sur le reef - Page 4 de 17 - Anticoste - M05</title>
+    <!-- Feuille de styles commune à tous -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Ajuster le href pour pointer sur la feuille de styles
+    du mandat en changeant le suffixe m99 -->
+    <link rel="stylesheet" href="../css/styles-m05.css">
+</head>
+<!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
+<body class="photo m05">
+  <header role="banner">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../accueil/m05.html">Anticoste</a></li>
+            <li class="nav__listItem icon--rose">
+                <a class="nav__link nav__link--active"
+                   href="../rose-des-vents/m05.html"></a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../credits/m05.html">À propos</a></li>
+        </ul>
+    </nav>
+  </header>
+
+<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+
+<main class="conteneur rangee">
+    <figure>
+        <picture>
+            <source
+                    media="(max-width: 600px)"
+                    srcset="../recit-5/images/v-04-m05_600.jpg 1x, ../recit-5/images/v-04-m05_1200.jpg 2x">
+            <source
+                    media="(min-width: 601px)"
+                    srcset="../recit-5/images/v-04-m05_1200.jpg 1x, ../recit-5/images/v-04-m05_2400.jpg 2x">
+            <img src="../recit-5/images/v-04-m05_1200.jpg"
+                 alt="">
+        </picture>
+        <figcaption>
+            <h1 class="h4">Pêche au hareng à la Baie Ellis, en juin</h1>
+            <p>Joseph Schmitt, Monographie de l’île d’Anticosti, Paris, Librairie scientifique A. Hermann,
+                1904 (Fig. 42)</p>
+        </figcaption>
+    </figure>
+</main>
+
+<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
+<footer role="contentinfo">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem icon--precedent">
+                <a class="nav__link switch"
+                   href="../rose-des-vents/m99.html">
+                    <span class="screen-reader-only">Précédent</span></a>
+            </li>
+            <li class="nav__listItem">
+                <span class="pagination">Récit V - page 4 de 17</span>
+            </li>
+            <li class="nav__listItem icon--suivant">
+                <a class="nav__link switch"
+                   href="v-05-m05.html">
+                    <span class="screen-reader-only">Suivant</span>
+
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+</body>
+</html>

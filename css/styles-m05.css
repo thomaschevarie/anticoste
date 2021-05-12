@@ -73,6 +73,10 @@ header{
     background-size: 50px;
     background-repeat: no-repeat;
 }
+.icon--rose:hover {
+    color: #4FDA76;
+}
+
 .nav--menu .nav__list {
     display: flex;
     justify-content: center;
@@ -125,6 +129,9 @@ header{
     background-repeat: no-repeat;
     transform: rotate(-90deg);
 }
+.icon--suivant:hover {
+    color: #4FDA76;
+}
 .icon--precedent {
     background-image: url("../recit-5/images/iconfinder_arrow.svg");
     background-size: 35px;
@@ -133,6 +140,10 @@ header{
     position: relative;
     top: 25px;
 }
+.icon--precedent:hover {
+    color: #4FDA76;
+}
+
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
@@ -262,13 +273,14 @@ header{
    ========================================================================== */
 .photo img{
     /*max-width: 90%;*/
+    margin-top: 50px;
 }
 figure{
     position: relative;
     margin:0;
 }
 .photo figure{
-    margin-bottom:10rem;
+    margin-bottom:7rem;
 }
 .photo figcaption {
     font-family: "Source Serif Pro";
@@ -305,12 +317,12 @@ figure{
 .texte__contenu{
     padding: 70px 2rem;
     margin-top: 40px;
-    margin-left: 500px;
+    /*margin-left: 500px;*/
     font-size:1.8rem;
 }
 @media (min-width: 600px) {
     .texte__contenu{
-        font-size:2.1rem;
+        font-size:2.4rem;
     }
 }
 .texte__infos{
@@ -330,4 +342,7 @@ figure{
         color: black;
         transition:color 0.5s;
     }
+}
+footer {
+    max-height: 70px;
 }
