@@ -13,8 +13,9 @@
 <!-- Ajuster le nom de classe m99 pour correspondre à votre mandat m01 à m13 -->
 <body class="m05">
 <!-- Bandeau d'entête et menu principal-->
-<header role="banner">
-    <nav class="nav nav--menu" role="navigation">
+<header class="accueil" role="banner">
+    <h1>Anticoste</h1>
+    <nav class="nav nav--menu--accueil" role="navigation">
         <ul class="nav__list">
             <li class="nav__listItem">
                 <a class="nav__link nav__link--active"
@@ -28,5 +29,73 @@
         </ul>
     </nav>
 </header>
+<main id="main" role="main">
+    <picture class="bannière">
+        <source
+                media="(max-width: 600px)"
+                srcset="../images/m05/banniere_600.jpg">
+        <source
+                media="(min-width: 601px)"
+                srcset="../images/m05/banniere_1200.jpg">
+        <img src="../images/m05/banniere_600.jpg"
+             alt="Exposition Anticoste">
+    </picture>
+    <section class="haut">
+        <h2>L’exposition Anticoste</h2>
+        <p>Perçue à la fois comme une « terre maudite » en raison des nombreux naufrages
+            qui s’y sont déroulés dans le passé et un « paradis » pour la grande nature
+            qu’elle incarne, l’Île d’Anticosti n’a cessé de fasciner notre imaginaire
+            collectif.</p>
+        <p>L’exposition Anticoste propose une série de regards où divers points de vue
+            sur l’Île et son histoire se croisent et se confrontent dans une série de
+            récits de l’entre-deux.</p>
+        <p>Issus des pages racornies, des images perdues, des pierres abandonnées et de
+            toutes ces choses que l’on croyait oubliées, ces récits nous font naviguer entre
+            chaos et utopie, entre beauté et hideur, entre raison et déraison.</p>
+    </section>
+    <section class="bas">
+        <div class="récits--numériques">
+            <div class="texte">
+               <h2>Sept récits numériques</h2>
+               <p>Anticoste présente le volet numérique de l’exposition de l’artiste Richard Baillargeon.
+                   La rose des vents permet de naviguer vers sept récits numériques qui présentent autant
+                   de facettes mythiques de l’Île Anticosti. Chacun de ces récits expose une succession de
+                   photographies, de citations et de documents d’archives.</p>
+            </div>
+            <picture class="carte-numerique">
+                <source
+                        media="(max-width: 600px)"
+                        srcset="../images/m05/carte-numérique_320.jpg">
+                <source
+                        media="(min-width: 601px)"
+                        srcset="../images/m05/carte-numérique_410.jpg">
+                <img src="../images/m05/carte-numérique_320.jpg"
+                     alt="Carte numérique">
+            </picture>
+        </div>
+        <div class="experience--immersive">
+            <h2>Expérience immersive</h2>
+            <p>Afin de vivre pleinement l’expérience immersive du parcours des sept récits,
+                activez l’affichage plein écran à l’aide des touches illustrées ci-dessous.</p>
+            <p class="commande">MacOS : Majuscule + Commande + F </p>
+            <p class="commande">Windows : F11 </p>
+            <p>Pour revenir en mode d’affichage régulier, appuyer sur la touche «escape».</p>
+            <picture class="escape">
+                <img src="../images/m05/esc_80.png"
+                     alt="Touche escape">
+            </picture>
+            <p>La navigation entre les pages de chaque récit est possible en utilisant les flèches de votre clavier.</p>
+            <picture class="fleches">
+                <img src="../images/m05/keyboard_80.png"
+                     alt="Flèches clavier">
+            </picture>
+        </div>
+    </section>
+
+</main>
+<footer role="contentinfo">
+    <small>Richard Baillargeon @ Tous droits réservés 2021 </small>
+</footer>
+
 </body>
 </html>
