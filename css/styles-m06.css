@@ -76,6 +76,12 @@ body{
     min-height: 100vh;
     background-color: #DBD7D1;
 }
+.jeune {
+    background-color: #FFD43D;
+}
+#rose {
+    width: 100px;
+}
 main.conteneur{
     min-height: 80vh;
     min-width: 375px;
@@ -90,6 +96,9 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
+}
+.entete__accueil {
+    align-content: center;
 }
 footer {
     bottom: 0;
