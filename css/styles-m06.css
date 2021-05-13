@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prenom Nom <courriel>
+ * @author Leonardo Coutinho <2032888@csfoy.ca>
  *
  * TABLE DES MATIERES
  * Charte typographique
@@ -19,6 +19,44 @@
 
 /* Charte typographique
    ========================================================================== */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: 'Della Respira', serif;
+}
+body{
+    font-family: 'Arsenal', sans-serif;
+}
+
+
+/* Base décimale */
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+        font-size: 1.8rem;
+    }
+}
+
 
 /* Styles de base
    ========================================================================== */
@@ -36,24 +74,38 @@ body{
     display: flex;
     flex-flow:column wrap;
     min-height: 100vh;
+    background-color: #DBD7D1;
+}
+.jeune {
+    background-color: #FFD43D;
+}
+#rose {
+    width: 100px;
 }
 main.conteneur{
     min-height: 80vh;
     min-width: 375px;
 }
-header,
-footer {
-    color: aliceblue;
-    background-color: rgba(50,50,50,1);
+header{
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
     position: fixed;
     width: 100%;
     z-index: 5;
 }
+.entete__accueil {
+    align-content: center;
+}
 footer {
     bottom: 0;
-}
-header{
-    top: 0;
+    background-color: #FFD43D;
+    padding-top: 1.5rem;
+    text-align: center;
+    list-style-position: inherit;
 }
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
@@ -72,7 +124,7 @@ header{
 }
 
 .nav--menu .nav__link {
-    color: aliceblue;
+    color: white;
     display: inline-block;
     padding: 1rem 1rem;
     text-decoration: none;
@@ -99,10 +151,10 @@ header{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background: rgb(236,244,248);
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */
     background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);
-    /*background-color: #434343;*/
+
 }
+
 .pagination{
     display: inline-block;
     margin:1rem;
@@ -110,8 +162,7 @@ header{
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m06/carte-navigation_1200.jpg");
-    background-size: cover;
+    background-image: url("../images/m06/Carte_1440.jpg");
 }
 .rose-des-vents .conteneur{
     padding-top:70px;
@@ -171,7 +222,7 @@ header{
     text-decoration: underline;
     color: #b22a2a; /* la dominante dans la main */
     font-size: 2.15rem;
-    background-image: url("../images/m06/main.png");
+    background-image: url("../images/m99/main.png");
     background-position: right;
     background-size: 3.5rem;
     background-repeat: no-repeat;
@@ -237,7 +288,7 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m06.jpg");
+    background-image: url("../demo-recit/images/i-txt-m99.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
