@@ -159,11 +159,17 @@ main.conteneur{
     min-width: 375px;
 }
 header{
+    padding-right: 10px;
     top: 0;
     background-image: url("../images/m07/bg_nav_principale.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: inherit;
+}
+.svg,
+svg{
+    width: 80px;
+    padding: 0;
 }
 header,
 footer {
@@ -181,6 +187,7 @@ footer {
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
 /* commun aux différentes navigations - balises nav>ul.nav__list */
+
 .nav__list {
     list-style: none;
     margin-left: 0;
@@ -439,4 +446,17 @@ figure{
         transition:color 0.5s;
 
     }
+}
+/* Niveau 1 - Gabarit page Crédits
+   ========================================================================== */
+.header_credit{
+    position: relative;
+}
+.footer_credit{
+    position: relative;
+}
+.footer_credit p{
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
 }
