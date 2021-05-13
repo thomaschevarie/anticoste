@@ -31,15 +31,18 @@ nav,
 .nav,
 blockquote{
     font-family: Merriweather, sans-serif ;
+    color: white;
 }
 h3,
 .h3,
 h4,
 .h4 {
     font-family: "Source Sans Pro", sans-serif ;
+    color: white;
 }
 body{
     font-family: "Source Sans Pro", sans-serif ;
+    color: white;
 }
 
 
@@ -228,11 +231,11 @@ header{
  ======================*/
 .main_credits{
     background-image:
-            url("../images/images-m03-niv1/credits_opac@1x_2000px.jpg");
+            url("../img_m03_niv1/credits_opac@1x_2000px.jpg");
     background-size: cover;
 }
 p{
-    color: black;
+    color: white;
 }
 p.credits_bold{
     font-weight: bold;
@@ -249,7 +252,7 @@ p.credits_bold{
    ================== */
 .rose-des-vents {
     background-image:
-            url("../images/images-m03-niv1/carte_opac_rose@_2000.jpg");
+            url("../img_m03_niv1/carte_opac_rose@_2000.jpg");
     background-size: cover;
 }
 .rose-des-vents .conteneur{
