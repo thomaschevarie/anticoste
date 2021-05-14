@@ -73,6 +73,10 @@ header{
     background-size: 50px;
     background-repeat: no-repeat;
 }
+.icon--rose:hover {
+    color: #4FDA76;
+}
+
 .nav--menu .nav__list {
     display: flex;
     justify-content: center;
@@ -125,6 +129,9 @@ header{
     background-repeat: no-repeat;
     transform: rotate(-90deg);
 }
+.icon--suivant:hover {
+    color: #4FDA76;
+}
 .icon--precedent {
     background-image: url("../recit-5/images/iconfinder_arrow.svg");
     background-size: 35px;
@@ -133,6 +140,97 @@ header{
     position: relative;
     top: 25px;
 }
+.icon--precedent:hover {
+    color: #4FDA76;
+}
+/* Niveau 1 - Accueil
+   ================== */
+.m05{
+    background-color: lightgray;
+}
+
+.accueil {
+    height: 100px;
+    background-color: #94AB9A;
+}
+.nav--menu--accueil .nav__list {
+    display: flex;
+    justify-content: center;
+    margin:-120px;
+}
+
+.nav--menu--accueil .nav__link {
+    font-family: "Source Serif Pro";
+    font-weight: bold;
+    color: #286238;
+    display: inline-block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-bottom: 5px solid transparent;
+}
+@media (min-width: 600px) {
+    .nav--menu--accueil .nav__link {
+        font-size: 1.6rem;
+        margin: 0 2rem;
+    }
+}
+.nav--menu--accueil .nav__link:hover {
+    color: #4FDA76;
+}
+.nav--menu--accueil .switch:hover {
+    transform: scale(2.25);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.nav--menu--accueil .nav__link--active {
+    color: #4FDA76;
+    text-decoration: underline;
+}
+.bannière {
+    padding-left: 30px;
+}
+.haut {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+.bas {
+    background-color: #94AB9A;
+    color: black;
+    padding: 20px;
+}
+.récits--numériques {
+    display:flex;
+}
+.carte-numerique {
+    width: 100%;
+}
+@media (min-width: 600px) {
+    .carte-numerique {
+        order: -1;
+        position: relative;
+        left: 65%;
+        padding: 20px;
+    }
+
+    .texte {
+        position: relative;
+        z-index: 1;
+        right: 35%;
+        padding: 20px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 60px;
+        text-align: end;
+    }
+}
+.commande {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
@@ -262,13 +360,14 @@ header{
    ========================================================================== */
 .photo img{
     /*max-width: 90%;*/
+    margin-top: 50px;
 }
 figure{
     position: relative;
     margin:0;
 }
 .photo figure{
-    margin-bottom:10rem;
+    margin-bottom:7rem;
 }
 .photo figcaption {
     font-family: "Source Serif Pro";
@@ -305,12 +404,12 @@ figure{
 .texte__contenu{
     padding: 70px 2rem;
     margin-top: 40px;
-    margin-left: 500px;
+    /*margin-left: 500px;*/
     font-size:1.8rem;
 }
 @media (min-width: 600px) {
     .texte__contenu{
-        font-size:2.1rem;
+        font-size:2.4rem;
     }
 }
 .texte__infos{
@@ -330,4 +429,7 @@ figure{
         color: black;
         transition:color 0.5s;
     }
+}
+footer {
+    max-height: 70px;
 }
