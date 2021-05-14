@@ -165,7 +165,6 @@ header,
 footer {
     color: aliceblue;
     background-color: #101c3d;
-    position: fixed;
     width: 100%;
     z-index: 5;
 }
@@ -231,7 +230,7 @@ header{
  ======================*/
 .main_credits{
     background-image:
-            url("../img_m03_niv1/credits_opac@1x_2000px.jpg");
+            url("../images/m03/credits_opac_2000.jpg");
     background-size: cover;
 }
 p{
@@ -239,20 +238,29 @@ p{
 }
 p.credits_bold{
     font-weight: bold;
+    color:black;
 }
 .credits_bloc_1{
     padding: 1rem;
+    color:black;
+}
+.credits_bloc_1 p{
+    color:black;
 }
 .credits_bloc_2{
     padding-left: 1rem;
     padding-bottom: 1rem;
+    color:black;
+}
+.credits_bloc_2 p{
+    color:black;
 }
 
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
     background-image:
-            url("../img_m03_niv1/carte_opac_rose@_2000.jpg");
+            url("../images/m03/carte_opac_rose_2000.jpg");
     background-size: cover;
 }
 .rose-des-vents .conteneur{
