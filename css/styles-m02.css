@@ -1,25 +1,59 @@
 @charset "UTF-8";
 
-/**
- * @author Prenom Nom <courriel>
- *
- * TABLE DES MATIERES
- * Charte typographique
- * Styles de base
- * Grille de mise en page
- * Navigations de l'interface (bandeau + pied)
- *** Niveau 1 - Accueil
- *** Niveau 1 - Rose des vents
- ****** navigation vers les récits
- *** Niveau 1 - Crédits
- *** Niveau 2 - Gabarit page Titre
- *** Niveau 2 - Gabarit page Photo
- *** Niveau 2 - Gabarit page Texte
- *//
+
+ /** @author Prenom Nom <courriel>*/
+ /***/
+ /** TABLE DES MATIERES*/
+ /** Charte typographique*/
+ /** Styles de base*/
+ /** Grille de mise en page*/
+ /** Navigations de l'interface (bandeau + pied)*/
+ /**** Niveau 1 - Accueil*/
+ /**** Niveau 1 - Rose des vents*/
+ /******* navigation vers les récits*/
+ /**** Niveau 1 - Crédits*/
+ /**** Niveau 2 - Gabarit page Titre*/
+ /**** Niveau 2 - Gabarit page Photo*/
+ /**** Niveau 2 - Gabarit page Texte*/
+
 
 /* Charte typographique
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Della+Respira&display=swap');
+
+:root {
+    /** Style camillemarceau07 [m02] **/
+    /* les caractères */
+    --m02-font-titre: 'Della Respira', serif;
+    --m02-font-principale: 'Arsenal', sans-serif;
+    --m02-font-ancienne: 'Della Respira', serif;
+    /* les couleurs */
+    --m02-noir: #1e1e1e;
+    --m02-vert: #3d4236;
+    --m02-gold: #996a0f;
+    --m02-beige: #e0d7c6;
+    --m02-blanc: #ffffff;
+    /* les tailles */
+    --m02-fontSize-interface-small: 1.6rem;
+    --m02-fontSize-interface-large: 1.8rem;
+    --m02-fontSize-recit-texte-small: 1.6rem;
+    --m02-fontSize-recit-texte-large: 2.8rem;
+    --m02-fontSize-recit-legende-small: 1.4rem;
+    --m02-fontSize-recit-legende-large: 2rem;
+    --m02-fontSize-recit-titre-small: 1.6rem;
+    --m02-fontSize-recit-titre-large: 2.4rem;
+    --m02-fontSize-h1-small: 5rem;
+    --m02-fontSize-h1-large: 11rem;
+    --m02-fontSize-accueil-h2-small: 5rem;
+    --m02-fontSize-accueil-h2-large: 9rem;
+    --m02-fontSize-credits-h2-small: 3rem;
+    --m02-fontSize-credits-h2-large: 3rem;
+    /* ombre */
+    --m02-ombre: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Charte typographique
+   ========================================================================== */
 
 h1,
 .h1,
@@ -65,7 +99,8 @@ body {
 /* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
 h1,
 .h1 { /* = 50px */
-    font-size: 50rem;
+    font-size: 5rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h1,
@@ -82,18 +117,19 @@ h1,
 
 h2,
 .h2 { /* = 30px */
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h2,
     .h2 { /* = 30px */
-        font-size: 3rem;
+        font-size: 9rem;
     }
 }
 @media (min-width: 800px) {
     h2,
     .h2 { /* = 30px */
-        font-size: 3rem;
+        font-size: 9rem;
     }
 }
 
@@ -165,8 +201,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-header,
-footer {
+header {
     position: fixed;
     width: 100%;
     z-index: 5;
@@ -408,4 +443,139 @@ figure{
         transition:color 0.5s;
 
     }
+}
+
+/* Niveau 1 - Accueil
+   ================== */
+
+.entete__accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 8rem;
+}
+
+.intro {
+    background-color: var(--m02-vert);
+    box-shadow: var(--m02-ombre);
+    margin-top: -1rem;
+    padding-bottom: 7rem;
+    padding-top: 5rem;
+}
+
+.texteIntro__accueil, .titre__accueil {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 599px) {
+    .intro {
+        background-image: url("../images/m07/main_accueil_320.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+}
+
+@media (min-width: 600px) {
+    .intro {
+        background-image: url("../images/m07/main_accueil_700.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        box-shadow: var(--m02-ombre);
+    }
+    .intro .rangee {
+        flex-direction: column;
+        padding-bottom: 7rem;
+    }
+
+    .titre__accueil {
+        margin-left: 25.5%;
+    }
+
+    .texteIntro__accueil {
+        margin-left: 51%;
+        margin-top: -8rem;
+    }
+}
+
+.septRecitsNum {
+    color: var(--m02-vert);
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    background-image: url("../images/m07/fond_septRecits_accueil_1200.jpg");
+    background-size: cover;
+}
+
+.titre__septRecisNum, .p__septRecisNum {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.titre__septRecisNum {
+    line-height: 92%;
+}
+
+.photoSeptRecits {
+    background-image: url("../images/m07/septRecits_accueil_1000.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 43rem;
+    padding-top: 7rem;
+    box-shadow: var(--m02-ombre);
+    margin-top: 5rem;
+}
+
+.recits__list {
+    font-family: 'Della Respira', serif;
+    font-weight: normal;
+    line-height: 187%;
+    font-size: 1.4rem;
+    letter-spacing: 0.25em;
+    list-style: none;
+    color: var(--m02-blanc);
+    margin-left: -2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--m02-vert);
+}
+
+@media (min-width: 600px) {
+
+    .septRecitsNum {
+        padding-bottom: 10rem;
+        padding-top: 10rem;
+    }
+
+    .titre__septRecisNum {
+        margin-top: -1rem;
+        text-align: right;
+    }
+
+    .photoSeptRecits {
+        height: 60rem;
+        margin-top: 5rem;
+    }
+
+    .recits__list {
+        margin-top: 10rem;
+        position: absolute;
+        right: 0;
+        padding-left: 10rem;
+        width: 60%;
+    }
+
+}
+
+.experieneImmersive {
+    background-color: var(--m02-noir);
+    padding-top: 2rem;
+}
+
+.texteExpImm__accueil {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.titreExpImm__accueil {
+    line-height: 92%;
 }
