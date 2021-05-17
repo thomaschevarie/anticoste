@@ -455,9 +455,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101c3d;
-    height: 150px;
-
+    min-height: 150px;
+}
+.footer_credits{
+    align-items: center;
+    justify-content: flex-end;
+max-height: 100px;
 }
 
 small {
@@ -466,10 +469,26 @@ small {
 
 /*Niveau 1 - Crédits
 ======================*/
-.main_credits {
-    background-image: url("../images/m03/credits_opac_2000.jpg");
-    background-size: cover;
+
+.header_credits{
+    background-color: #101c3d;
 }
+.m03__credits header{
+padding-top: 2rem;
+}
+@media(max-width: 600px) {
+    .main_credits{
+        background-image: url("../images/m03/credits_opac_600.png");
+        background-size: cover;
+    }
+}
+@media(min-width: 601px)  {
+    .main_credits {
+        background-image: url("../images/m03/credits_opac_1440.png");
+        background-size: cover;
+    }
+}
+
 
 p {
     color: black;
