@@ -13,6 +13,7 @@
  *** Niveau 1 - Rose des vents
  ****** navigation vers les récits
  *** Niveau 1 - Crédits
+ /* Ajout experience immersive
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
  *** Niveau 2 - Gabarit page Texte
@@ -203,37 +204,29 @@ main.conteneur {
     }
 }
 
+.m03__accueil header {
+    background-color: #101c3d;
+    max-height: 170px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+@media (min-width: 601px) {
     .m03__accueil header {
-        background-color: #101c3d;
-        height: 160px;
-        padding-top: 1rem;
 
-    }
+        min-height: 230px;
 
-@media(min-width: 601px) {
-    .m03__credits header {
-        background-color: #101c3d;
-        height: 250px;
-        padding-top: 3rem;
     }
 }
 
-/*header{*/
-/*    color: aliceblue;*/
-/*    background-color: #101c3d;*/
-/*    width: 100%;*/
-/*    z-index: 5;*/
-/*    height:100px;*/
-/*}*/
 footer {
     color: aliceblue;
     width: 100%;
     z-index: 5;
 }
 
-header {
-    top: 0;
-}
+
 
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
@@ -318,66 +311,76 @@ ul .nav__list {
 
 /*Niveau 1 - Accueil
 ======================*/
-.anticoste_accueil{
-    margin: 0 11px 0 0px;
+.anticoste_accueil {
+    margin: 0 5px 0 0;
     text-align: center;
 
 }
-@media(min-width: 601px) {
+
+@media (min-width: 601px) {
     .anticoste_accueil {
         margin: 1rem 0 1rem 0;
     }
 }
+
 .p1 {
     margin: 1rem;
+}
+
+@media (max-width: 600px) {
+    .h2_septRecits,
+    .h2_immersive {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .h2_exposition {
+        color: white;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .p2 {
+        color: white;
+        padding: 0 0 3rem 0;
+    }
 }
 
 @media (min-width: 601px) {
     .p2 {
         color: white;
-        margin: 0 0 0 1rem;
-        padding-bottom: 2rem;
+
     }
 }
 
-.p3 {
-    margin: 1rem;
+.p1,
+.p2,
+.p3,
+.p4,
+.p5 {
+    padding: 0 1rem;
+}
+@media(min-width: 601px){
+    .p5{
+        margin:0;
+        padding: 0;
+    }
 }
 
-
+.bleed {
+    background-color: #101c3d;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
 @media (min-width: 601px) {
-    .bleed {
-        background-color: #101c3d;
-    }
-}
-@media (max-width: 600px) {
-   .bleed {
-
-
-
-    }
-}
-
-@media(min-width: 601px){
     .h2_exposition,
     .p_exposition,
-    p{
+    p {
         color: white;
         margin: 10px;
-    }
-}
-
-@media (min-width: 601px) {
-    .sept_recits {
-        color: white;
-        background-color: #101c3d;
-        width: 1000px;
-        height: 100px;
-        margin-bottom: 0;
-        margin-top: 2rem;
-        padding-left: 1rem;
-        padding-top: 2rem;
     }
 }
 
@@ -395,10 +398,40 @@ ul .nav__list {
     }
 }
 
+/* Ajout experience immersive
+=================================================*/
+@media(min-width: 601px){
 .experieneImmersive {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.4rem;
+    padding-left: 3rem;
+}
+}
+.kbd {
+    color: black;
+    font-weight: bold;
+}
+
+
+.dt {
+    font-size: 2rem;
+    }
+
+.dd {
+    text-align: left;
+    background-color: #142D7A;
+    color: white;
+    max-width: 100px;
+    margin:1rem 0 2rem 0;
+
+
+}
+
+.cmd {
+    padding-left: 1.4rem
+}
+
+.f11 {
+    padding-left: 1.5rem;
+
 }
 
 @media (min-width: 601px) {
@@ -422,9 +455,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101c3d;
-    height: 150px;
-
+    min-height: 150px;
+}
+.footer_credits{
+    align-items: center;
+    justify-content: flex-end;
+max-height: 100px;
 }
 
 small {
@@ -433,14 +469,30 @@ small {
 
 /*Niveau 1 - Crédits
 ======================*/
-.main_credits {
-    background-image: url("../images/m03/credits_opac_2000.jpg");
-    background-size: cover;
+
+.header_credits{
+    background-color: #101c3d;
 }
+.m03__credits header{
+padding-top: 2rem;
+}
+@media(max-width: 600px) {
+    .main_credits{
+        background-image: url("../images/m03/credits_opac_600.png");
+        background-size: cover;
+    }
+}
+@media(min-width: 601px)  {
+    .main_credits {
+        background-image: url("../images/m03/credits_opac_1440.png");
+        background-size: cover;
+    }
+}
+
 
 p {
     color: black;
-    margin: 1rem;
+
 }
 
 p.credits_bold {
