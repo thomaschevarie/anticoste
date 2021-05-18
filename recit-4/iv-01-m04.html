@@ -35,14 +35,16 @@
 </header>
 
 <main class="conteneur rangee">
-    <figure>
+    <figure class="cols_8_de_12">
         <picture class="picture__tag">
-            <source srcset="https://picsum.photos/id/12/1200/800"/>
-            <img src="https://picsum.photos/id/12/1200/800" alt="">
+            <source media="(max-width: 600px)" srcset="images/iv-01-m04_600.jpg, images/iv-01-m04_1200.jpg 2x"/>
+            <source media="(min-width: 601px)" srcset="images/iv-01-m04_1200.jpg, images/iv-01-m04_2400.jpg 2x"/>
+            <img src="images/iv-01-m04_1200.jpg" alt="Chocolat Menier, fragment d’une enseigne publicitaire d’époque">
         </picture>
         <figcaption>
-            <h1 class="h4">Identification de la source</h1>
-            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+            <h1 class="h4">Chocolat Menier, fragment d’une enseigne publicitaire d’époque
+            </h1>
+            <p>Voir le site http://chocolatmenier.free.fr/</p>
         </figcaption>
     </figure>
 </main>
