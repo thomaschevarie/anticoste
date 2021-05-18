@@ -28,6 +28,7 @@ body{
     color: aliceblue;
     background-color: #000;
     background-image: url("../images/m04/BackgroundRecit_1200.jpg");
+    background-attachment: fixed;
     font-family: "Tinos", sans-serif;
     line-height: 150%;
 }
@@ -304,6 +305,62 @@ h2 {
     text-decoration: underline;
     transform: translate(20px , 0);
 }
+
+/*Niveau 1 - Credit
+   ========================================== */
+.credit--contenu{
+    margin: 135px 12.8% 5rem;
+    color: #040918;
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+.credit--contenu h1, h2, h3 {
+    color: #0A163D;
+    font-weight: bold;
+}
+.credit--contenu h2, h3 {
+    text-decoration: underline;
+}
+
+.credit--Remerciment img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 600px) {
+    .credit--Remerciment img {
+        float: right;
+    }
+}
+
+.credit--credit{
+    margin-top: 4rem;
+}
+
+.credit--list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.credit--list li {
+    line-height: 2.5rem;
+}
+
+.credit--list a:visited, a:link {
+    color: #0A163D;
+    text-decoration: none;
+}
+.credit--list a:hover, a:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 
 /* Niveau 2 - Gabarit page Titre
