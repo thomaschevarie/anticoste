@@ -27,7 +27,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 h1,
-.h1 {
+.h1,
+blockquote,
+.blockquote{
     font-family: Merriweather, sans-serif;
     color: white;
 }
@@ -186,12 +188,14 @@ main.conteneur {
 .figcaption {
     padding-left: 0.5rem;
 }
-
+.m03__accueil header{
+    background-color: #101c3d;
+    min-height: 175px;
+}
 @media (min-width: 601px) {
-
     .m03__accueil header {
-        background-color: #101c3d;
-        height: 200px
+
+        min-height: 200px
     }
 }@media (min-width: 601px) {
 
@@ -202,10 +206,11 @@ main.conteneur {
     }
 }
 .h1_cimetiere{
-    color: black;
+    color: white;
     text-align: center;
     padding-top: 2rem;
 }
+
 @media (min-width: 601px) {
     .m03__rose-des-vents header {
         background-color: #101c3d;
@@ -218,7 +223,16 @@ main.conteneur {
     display: flex;
     flex-direction: row;
 }
+.footer_index--video{
+    top:330px;
+    position: absolute;
 
+}
+@media(min-width: 601px){
+    .footer_index--video{
+        top:77rem;
+    }
+}
 @media (min-width: 601px) {
     .m03__accueil header {
 
@@ -229,8 +243,7 @@ main.conteneur {
 
 footer {
     color: aliceblue;
-    width: 100%;
-    z-index: 5;
+       z-index: 5;
 }
 
 
@@ -312,18 +325,22 @@ ul .nav__list {
     margin-top: 3rem;
     margin-left: 2rem;
 }
-
-.pagination {
-    display: inline-block;
-    margin: 1rem;
+.nav__listItem--pagination{
+    margin:2rem 2rem;
+    text-align: center;
 }
+@media(min-width: 601px) {
+    .nav__listItem--pagination{
+        padding:0 16rem 10rem 16rem;
+    }
+}
+
 
 /*Niveau 1 - Accueil
 ======================*/
 .anticoste_accueil {
-    margin: 0 5px 0 0;
+    margin: 1rem 0 0 0;
     text-align: center;
-
 }
 
 @media (min-width: 601px) {
@@ -481,6 +498,7 @@ small {
 
 .header_credits{
     background-color: #101c3d;
+    padding-top: 2rem;
 }
 .m03__credits header{
 padding-top: 2rem;
@@ -627,19 +645,37 @@ background-color: #101c3d;
     }
 }
 
+.conteneur__rangee{
+    min-height: 90vh;
+    min-width: 375px;
+  }
 .video__tag {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -160px;
+    left: 25px;
     width: 100%;
     height: 100%;
     z-index: -1;
+ align-items: center;
+}
+@media(min-width: 601px){
+    .video__tag{
+top:100px;
+       left: -0.05rem;
+    }
 }
 
+
+
+
+svg{
+    min-width: 40px;
+    min-height:40px;
+}
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
 .photo img {
-    max-width: 90%;
+    max-width: 100%;
 
 }
 
@@ -648,13 +684,10 @@ figure {
     margin: 0;
 }
 
-.photo figure {
-    margin-bottom: 10rem;
-}
 
 .photo figcaption {
     color: aliceblue;
-    background-color: #434343;
+    background-color: aliceblue;
     padding: 2rem;
 }
 
