@@ -193,8 +193,19 @@ main.conteneur {
         background-color: #101c3d;
         height: 200px
     }
-}
+}@media (min-width: 601px) {
 
+    .m03__titre header {
+        background-color: #101c3d;
+        padding-top: 2rem;
+
+    }
+}
+.h1_cimetiere{
+    color: black;
+    text-align: center;
+    padding-top: 2rem;
+}
 @media (min-width: 601px) {
     .m03__rose-des-vents header {
         background-color: #101c3d;
@@ -203,13 +214,9 @@ main.conteneur {
 
     }
 }
-
-.m03__accueil header {
-    background-color: #101c3d;
-    max-height: 170px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
+.footer_index{
+    display: flex;
+    flex-direction: row;
 }
 
 @media (min-width: 601px) {
@@ -243,7 +250,9 @@ footer {
     justify-content: center;
     margin-right: 1rem;
 }
-
+.nav--menuIndex{
+    display: inline-block;
+}
 .nav--menu .nav__link {
     color: aliceblue;
     display: inline-block;
@@ -597,6 +606,9 @@ p.credits_bold {
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
+.header_titre{
+background-color: #101c3d;
+}
 .titre .rangee {
     display: flex;
     justify-content: center;
