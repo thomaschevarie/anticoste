@@ -27,7 +27,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 h1,
-.h1 {
+.h1,
+blockquote,
+.blockquote{
     font-family: Merriweather, sans-serif;
     color: white;
 }
@@ -186,13 +188,27 @@ main.conteneur {
 .figcaption {
     padding-left: 0.5rem;
 }
-
+.m03__accueil header{
+    background-color: #101c3d;
+    min-height: 175px;
+}
 @media (min-width: 601px) {
-
     .m03__accueil header {
-        background-color: #101c3d;
-        height: 200px
+
+        min-height: 200px
     }
+}@media (min-width: 601px) {
+
+    .m03__titre header {
+        background-color: #101c3d;
+        padding-top: 2rem;
+
+    }
+}
+.h1_cimetiere{
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
 }
 
 @media (min-width: 601px) {
@@ -203,15 +219,20 @@ main.conteneur {
 
     }
 }
-
-.m03__accueil header {
-    background-color: #101c3d;
-    max-height: 170px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.footer_index{
+    display: flex;
+    flex-direction: row;
+}
+.footer_index--video{
+    top:330px;
+    position: absolute;
 
 }
-
+@media(min-width: 601px){
+    .footer_index--video{
+        top:77rem;
+    }
+}
 @media (min-width: 601px) {
     .m03__accueil header {
 
@@ -222,8 +243,7 @@ main.conteneur {
 
 footer {
     color: aliceblue;
-    width: 100%;
-    z-index: 5;
+       z-index: 5;
 }
 
 
@@ -242,8 +262,18 @@ footer {
     display: flex;
     justify-content: center;
     margin-right: 1rem;
+    padding-top: 3rem;
 }
+.nav--menu .nav__list--footer{
+    display: flex;
+    justify-content: center;
+    max-height: 120px;
+    padding-top: 20px;
 
+}
+.nav--menuIndex{
+    display: inline-block;
+}
 .nav--menu .nav__link {
     color: aliceblue;
     display: inline-block;
@@ -303,18 +333,22 @@ ul .nav__list {
     margin-top: 3rem;
     margin-left: 2rem;
 }
-
-.pagination {
-    display: inline-block;
-    margin: 1rem;
+.nav__listItem--pagination{
+    margin:2rem 2rem;
+    text-align: center;
 }
+@media(min-width: 601px) {
+    .nav__listItem--pagination{
+        padding:0 16rem 10rem 16rem;
+    }
+}
+
 
 /*Niveau 1 - Accueil
 ======================*/
 .anticoste_accueil {
-    margin: 0 5px 0 0;
+    margin: 1rem 0 0 0;
     text-align: center;
-
 }
 
 @media (min-width: 601px) {
@@ -451,12 +485,7 @@ ul .nav__list {
 
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px;
-}
+
 .footer_credits{
     align-items: center;
     justify-content: flex-end;
@@ -472,6 +501,7 @@ small {
 
 .header_credits{
     background-color: #101c3d;
+    padding-top: 2rem;
 }
 .m03__credits header{
 padding-top: 2rem;
@@ -525,16 +555,82 @@ p.credits_bold {
     background-image: url("../images/m03/carte_opac_rose_2000.jpg");
     background-size: cover;
 }
-
+.cols_5_de_12{
+    position: absolute;
+}
 .rose-des-vents .conteneur {
     padding-top: 70px;
 }
+.nav--recits .nav__list .nav__link{
+    font-size: 1.6rem;
 
-/* navigation vers les récits */
-.nav--recits {
-    font-family: 'Merriweather', sans-serif;
-    font-weight: bold;
 }
+@media(max-width: 600px){
+    .svg_rose{
+        left:-75px;
+    }
+}
+.svg_rose{
+    position: absolute;
+    max-width:300px;
+    padding-top: 7rem;
+    transform: rotate(5deg);
+    z-index: 20;
+}
+@media(min-width: 601px) {
+    .svg_rose{
+        position: absolute;
+        max-width: 400px;
+
+    }
+}
+@media(max-width: 600px) {
+    .rose_opac {
+        position: absolute;
+        z-index: -1;
+        min-height: 100vh;
+        right: -40px;
+        min-width: 400px;
+    }
+}
+@media(min-width: 601px){
+    .rose_opac{
+min-width: 1440px;
+        position: absolute;
+        z-index: -1;
+        min-height: 100vh;
+    }
+}
+.footer_rose{
+    justify-content: center;
+    background-color: #101c3d;
+    margin-top:16rem;
+}
+.pagination_rose{
+    color: white;
+}
+@media(min-width: 601px){
+    .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        transform: translate(-190px, 85px);
+    }
+    .nav--recits .nav__listItem:nth-child(2) .nav__link{
+        transform: translate(180px, 55px); }
+    .nav--recits .nav__listItem:nth-child(3) .nav__link{
+        transform: translate(-350px, 55px);}
+    .nav--recits .nav__listItem:nth-child(4) .nav__link{
+        transform: translate(300px, 55px);}
+    .nav--recits .nav__listItem:nth-child(5) .nav__link{
+        transform: translate(-375px, 55px);}
+    .nav--recits .nav__listItem:nth-child(6) .nav__link{
+        transform: translate(220px, 55px);}
+    .nav--recits .nav__listItem:nth-child(7) .nav__link{
+        transform: translate(-240px, 30px);}
+}
+    /* navigation vers les récits */
+    .nav--recits {
+        font-family: 'Merriweather', sans-serif;
+        font-weight: bold;
+    }
 
 @media (min-width: 600px) {
     .nav--recits {
@@ -573,7 +669,7 @@ p.credits_bold {
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
+    color: #101c3d;
     text-decoration: none;
     display: block;
     padding-right: 4rem;
@@ -597,6 +693,9 @@ p.credits_bold {
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
+.header_titre{
+background-color: #101c3d;
+}
 .titre .rangee {
     display: flex;
     justify-content: center;
@@ -615,19 +714,37 @@ p.credits_bold {
     }
 }
 
+.conteneur__rangee{
+    min-height: 90vh;
+    min-width: 375px;
+  }
 .video__tag {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -160px;
+    left: 25px;
     width: 100%;
     height: 100%;
     z-index: -1;
+ align-items: center;
+}
+@media(min-width: 601px){
+    .video__tag{
+top:100px;
+       left: -0.05rem;
+    }
 }
 
+
+
+
+svg{
+    min-width: 40px;
+    min-height:40px;
+}
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
 .photo img {
-    max-width: 90%;
+    max-width: 100%;
 
 }
 
@@ -636,13 +753,10 @@ figure {
     margin: 0;
 }
 
-.photo figure {
-    margin-bottom: 10rem;
-}
 
 .photo figcaption {
     color: aliceblue;
-    background-color: #434343;
+    background-color: aliceblue;
     padding: 2rem;
 }
 
@@ -707,12 +821,12 @@ figure {
 }
 
 /*grid 12 colonnes*/
-@media (min-width: 600px) {
-    .conteneur {
-        margin: 0 auto;
-        max-width: 1000px;
-        padding: 0;
-        /* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage */
-        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
-    }
-}
+/*@media (min-width: 600px) {*/
+/*    .conteneur {*/
+/*        margin: 0 auto;*/
+/*        max-width: 1000px;*/
+/*        padding: 0;*/
+/*        !* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage *!*/
+/*        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;*/
+/*    }*/
+/*}*/
