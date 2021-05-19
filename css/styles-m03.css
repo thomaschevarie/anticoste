@@ -262,6 +262,14 @@ footer {
     display: flex;
     justify-content: center;
     margin-right: 1rem;
+    padding-top: 3rem;
+}
+.nav--menu .nav__list--footer{
+    display: flex;
+    justify-content: center;
+    max-height: 120px;
+    padding-top: 20px;
+
 }
 .nav--menuIndex{
     display: inline-block;
@@ -477,12 +485,7 @@ ul .nav__list {
 
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px;
-}
+
 .footer_credits{
     align-items: center;
     justify-content: flex-end;
@@ -552,16 +555,67 @@ p.credits_bold {
     background-image: url("../images/m03/carte_opac_rose_2000.jpg");
     background-size: cover;
 }
-
+.cols_5_de_12{
+    position: absolute;
+}
 .rose-des-vents .conteneur {
     padding-top: 70px;
 }
 
-/* navigation vers les récits */
-.nav--recits {
-    font-family: 'Merriweather', sans-serif;
-    font-weight: bold;
+.svg_rose{
+    position: absolute;
+    max-width:350px;
+    padding-top: 5rem;
+    padding-left: 0;
+    opacity: 0.5;
+    transform: rotate(5deg);
+    z-index: 20;
 }
+@media(min-width: 601px) {
+    .svg_rose{
+        position: absolute;
+        max-width: 400px;
+
+
+    }
+}
+@media(min-width: 601px){
+    .rose_opac{
+        position: absolute;
+        z-index: -1;
+        min-height: 100vh;
+    }
+}
+.footer_rose{
+    justify-content: center;
+    background-color: #101c3d;
+    margin-top:4rem;
+}
+.pagination_rose{
+    color: white;
+}
+@media(min-width: 601px){
+    .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        transform: translate(-190px, 85px);
+    }
+    .nav--recits .nav__listItem:nth-child(2) .nav__link{
+        transform: translate(180px, 55px); }
+    .nav--recits .nav__listItem:nth-child(3) .nav__link{
+        transform: translate(-350px, 55px);}
+    .nav--recits .nav__listItem:nth-child(4) .nav__link{
+        transform: translate(300px, 55px);}
+    .nav--recits .nav__listItem:nth-child(5) .nav__link{
+        transform: translate(-375px, 55px);}
+    .nav--recits .nav__listItem:nth-child(6) .nav__link{
+        transform: translate(220px, 55px);}
+    .nav--recits .nav__listItem:nth-child(7) .nav__link{
+        transform: translate(-240px, 30px);}
+}
+    /* navigation vers les récits */
+    .nav--recits {
+        font-family: 'Merriweather', sans-serif;
+        font-weight: bold;
+    }
 
 @media (min-width: 600px) {
     .nav--recits {
@@ -600,7 +654,7 @@ p.credits_bold {
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
+    color: #101c3d;
     text-decoration: none;
     display: block;
     padding-right: 4rem;
