@@ -27,11 +27,21 @@
 body{
     color: aliceblue;
     background-color: #000;
-    background-image: url("../images/m04/BackgroundRecit_1200.jpg");
+    background-image: url("../images/m04/BackgroundRecit_600.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Tinos", sans-serif;
     line-height: 150%;
 }
+
+@media (min-width: 600px) {
+    body {
+        background-image: url("../images/m04/BackgroundRecit_1440.jpg");
+        background-size: cover;
+    }
+}
+
 blockquote{
     margin:0;
 }
@@ -81,7 +91,6 @@ header{
     color: #6689F4;
 }
 
-
 .nav__list {
     list-style: none;
     margin-left: 0;
@@ -109,6 +118,41 @@ footer .nav--menu .nav__list {
     height: 62px;
 }
 
+footer .nav--menu .nav__list {
+    justify-content: space-around;
+}
+@media (min-width: 600px) {
+    footer .nav--menu .nav__list {
+        justify-content: space-between;
+    }
+}
+
+
+footer .nav--menu .nav__listItem:first-child{
+    margin-left: 8%;
+}
+
+footer .nav--menu .nav__listItem:last-child{
+    margin-right: 8%;
+}
+@media (min-width: 600px) {
+    footer .nav--menu .nav__listItem:first-child,
+    footer .nav--menu .nav__listItem:last-child {
+        position: relative;
+        margin-bottom: 12rem;
+        transform: translate(0, -300px);
+    }
+
+    footer .nav--menu .nav__listItem:first-child {
+        margin-left: 15%;
+    }
+
+    footer .nav--menu .nav__listItem:last-child {
+        margin-right: 15%;
+    }
+}
+
+
 .nav__listItem {
     margin: auto 0;
 }
@@ -129,10 +173,32 @@ footer .nav--menu .nav__list {
 .nav--menu .nav__link:hover {
     color: #6689F4;
 }
+
+.nav--menu .switch {
+    fill: #0A163D;
+}
 .nav--menu .switch:hover {
-    transform: scale(2.25);
+    transform: scale(1.25);
     text-decoration: none;
     transition: all 0.3s;
+    fill: #6689F4;
+}
+
+.iconeFleche {
+    fill: #DAE4F1;
+    transform: scale(0.50);
+}
+
+@media (min-width: 600px) {
+    .iconeFleche {
+        fill: #0A163D;
+        transform: scale(1);
+    }
+}
+
+.iconeFleche:hover{
+    transition: all 0.3s;
+    fill: #6689F4;
 }
 
 .pagination{
@@ -168,7 +234,7 @@ footer .nav--menu .nav__list {
     }
 }
 
-h1, h2 {
+.accueil h1, h2 {
     margin-top: 0;
     font-size: 4.8rem;
     font-style: italic;
@@ -176,11 +242,11 @@ h1, h2 {
     line-height: 100%;
 }
 
-h1 {
+.accueil h1 {
     padding-top: 6rem;
 }
 
-h2 {
+.accueil h2 {
     padding-top: 7.6rem;
 }
 .section1 p:last-child {
@@ -315,11 +381,15 @@ h2 {
     list-style-type: none;
 }
 
-.credit--contenu h1, h2, h3 {
+.credit--contenu h1 {
     color: #0A163D;
+}
+
+.credit--contenu h1, h2, h3 {
     font-weight: bold;
 }
 .credit--contenu h2, h3 {
+    color: #040918;
     text-decoration: underline;
 }
 
@@ -354,13 +424,6 @@ h2 {
 .credit--list a:hover, a:active {
     text-decoration: underline;
 }
-
-
-
-
-
-
-
 
 
 /* Niveau 2 - Gabarit page Titre
@@ -398,12 +461,26 @@ figure{
     margin:0;
 }
 .photo figure{
-    margin-bottom:10rem;
+    margin-top: 20rem;
+    margin-right: auto;
+    margin-left: auto;
 }
+@media (min-width: 600px){
+    .photo figure {
+        margin-left: 17%;
+    }
+}
+
+.photo figcaption p {
+    font-size: 1.6rem;
+}
+
 .photo figcaption {
-    color: aliceblue;
-    background-color: #434343;
-    padding: 2rem;
+    color: white;
+    background-color: #040918;
+    padding: 0.6rem;
+    text-align: center;
+    margin-bottom: 90px;
 }
 @media (min-width: 600px) {
     .photo figcaption {
@@ -411,33 +488,41 @@ figure{
         width:100%;
         bottom:0;
         opacity:0;
+        margin-bottom: 0;
     }
     .photo figcaption:hover {
-        opacity:0.85;
+        opacity:0.92;
         transition: opacity 0.5s;
         cursor: help;
     }
 }
+.lienFigCaption:link,
+.lienFigCaption:visited {
+    color: #DAE4F1;
+    text-decoration: underline;
+}
+.lienFigCaption:hover,
+.lienFigCaption:active {
+    color: #6689F4;
+}
 
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
-.texte{
-    background-image: url("../demo-recit/images/i-txt-m99.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .texte .rangee{
     justify-content: center;
     align-items: center;
     color:#000;
 }
 .texte__contenu{
+    margin-top: 10rem;
     padding: 70px 2rem;
-    font-size:1.8rem;
+    font-size:3.2rem;
+    line-height: 150%;
 }
 @media (min-width: 600px) {
     .texte__contenu{
-        font-size:2.1rem;
+        font-size:3.2rem;
+        line-height: 150%;
     }
 }
 .texte__infos{
