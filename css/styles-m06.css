@@ -167,6 +167,7 @@ footer {
 .bandeau{
     margin-top: 380px;
     max-width: 1000px;
+    padding-bottom: 150px;
 }
 
 .pagination{
@@ -189,6 +190,7 @@ footer {
 
 .texte_recit {
     background-color: #FFD43D;
+    color: #442016;
 }
 
 .rose-des-vents .conteneur{
