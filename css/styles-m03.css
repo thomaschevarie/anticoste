@@ -171,6 +171,9 @@ body {
 blockquote {
     margin: 0;
 }
+.conteneur{
+    padding:0;
+}
 
 /* Grille de mise en page
    ========================================================================== */
@@ -182,7 +185,6 @@ body {
 
 main.conteneur {
     min-height: 80vh;
-    min-width: 375px;
 }
 
 .figcaption {
@@ -261,14 +263,12 @@ footer {
 .nav--menu .nav__list {
     display: flex;
     justify-content: center;
-    margin-right: 1rem;
-    padding-top: 3rem;
 }
 .nav--menu .nav__list--footer{
     display: flex;
     justify-content: center;
-    max-height: 120px;
-    padding-top: 20px;
+
+
 
 }
 .nav--menuIndex{
@@ -277,30 +277,22 @@ footer {
 .nav--menu .nav__link {
     color: aliceblue;
     display: inline-block;
-    padding: 1rem 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
     text-decoration: none;
     font-size: 1.4rem;
-    border-bottom: 5px solid transparent;
 }
 
 @media (min-width: 600px) {
     .nav--menu .nav__link {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         margin: 0 2rem;
 
     }
 }
 
-.nav__listItem {
-    margin: 0 3rem;
-}
-
 @media (min-width: 600px) {
     .nav__listItem {
         margin: 0 8rem 0 7rem;
-        padding-bottom: 3rem;
+        /*padding-bottom: 3rem;*/
     }
 }
 
@@ -314,16 +306,16 @@ footer {
     transition: all 0.3s;
 }
 
-.nav--menu .nav__link--active {
-    color: #ecf4f8;
-    border-bottom: 5px solid #ecf4f8;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background: rgb(236, 244, 248);
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */
-    background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);
-    /*background-color: #434343;*/
-}
+/*.nav--menu .nav__link--active {*/
+/*    color: #ecf4f8;*/
+/*    border-bottom: 5px solid #ecf4f8;*/
+/*    border-top-left-radius: 20px;*/
+/*    border-top-right-radius: 20px;*/
+/*    background: rgb(236, 244, 248);*/
+/*    !* tests et code du dégradé faits avec https://cssgradient.io/ *!*/
+/*    background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);*/
+/*    !*background-color: #434343;*!*/
+/*}*/
 
 ul .nav__list {
     position: relative;
@@ -331,15 +323,15 @@ ul .nav__list {
 
 .svg__immersive {
     margin-top: 3rem;
-    margin-left: 2rem;
+    /*margin-left: 2rem;*/
 }
 .nav__listItem--pagination{
-    margin:2rem 2rem;
+
     text-align: center;
 }
 @media(min-width: 601px) {
     .nav__listItem--pagination{
-        padding:0 16rem 10rem 16rem;
+        /*padding:0 16rem 10rem 16rem;*/
     }
 }
 
@@ -353,12 +345,12 @@ ul .nav__list {
 
 @media (min-width: 601px) {
     .anticoste_accueil {
-        margin: 1rem 0 1rem 0;
+        /*margin: 1rem 0 1rem 0;*/
     }
 }
 
 .p1 {
-    margin: 1rem;
+    /*margin: 1rem;*/
 }
 
 @media (max-width: 600px) {
@@ -378,7 +370,7 @@ ul .nav__list {
 @media (max-width: 600px) {
     .p2 {
         color: white;
-        padding: 0 0 3rem 0;
+        /*padding: 0 0 3rem 0;*/
     }
 }
 
@@ -394,7 +386,7 @@ ul .nav__list {
 .p3,
 .p4,
 .p5 {
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
 }
 @media(min-width: 601px){
     .p5{
@@ -414,7 +406,7 @@ ul .nav__list {
     .p_exposition,
     p {
         color: white;
-        margin: 10px;
+        /*margin: 10px;*/
     }
 }
 
@@ -435,8 +427,8 @@ ul .nav__list {
 /* Ajout experience immersive
 =================================================*/
 @media(min-width: 601px){
-.experieneImmersive {
-    padding-left: 3rem;
+.experienceImmersive {
+    /*padding-left: 3rem;*/
 }
 }
 .kbd {
@@ -454,24 +446,24 @@ ul .nav__list {
     background-color: #142D7A;
     color: white;
     max-width: 100px;
-    margin:1rem 0 2rem 0;
+    /*margin:1rem 0 2rem 0;*/
 
 
 }
 
 .cmd {
-    padding-left: 1.4rem
+    /*padding-left: 1.4rem*/
 }
 
 .f11 {
-    padding-left: 1.5rem;
+    /*padding-left: 1.5rem;*/
 
 }
 
 @media (min-width: 601px) {
     .cols_6_de_12 {
         width: 90%;
-        margin-left: 2rem;
+        /*margin-left: 2rem;*/
     }
 }
 
@@ -479,17 +471,16 @@ ul .nav__list {
     background-color: #1A3375;
     max-width: 400px;
     color: white;
-    padding: 1rem 1.4rem;
-    margin: 4rem 0 2rem 2rem;
+    /*padding: 1rem 1.4rem;*/
+    /*margin: 4rem 0 2rem 2rem;*/
     justify-content: center;
 
 }
 
 
-.footer_credits{
-    align-items: center;
-    justify-content: flex-end;
-max-height: 100px;
+.footer_credits .cols_4_de_12 {
+    float:right;
+    /*margin-right: 2rem;*/
 }
 
 small {
@@ -551,20 +542,22 @@ p.credits_bold {
 
 /* Niveau 1 - Rose des vents
    ================== */
-.rose-des-vents {
-    background-image: url("../images/m03/carte_opac_rose_2000.jpg");
-    background-size: cover;
+.body_rose{
+    background-image: url("../images/m03/carte_opac_rose_600.jpg");
 }
+@media(min-width: 601px) {
+    .body_rose {
+        background-image: url("../images/m03/carte_opac_rose_2000.jpg");
+        background-size: cover;
+    }
+}
+
 .cols_5_de_12{
     position: absolute;
 }
-.rose-des-vents .conteneur {
-    padding-top: 70px;
-}
-.nav--recits .nav__list .nav__link{
-    font-size: 1.6rem;
 
-}
+
+
 @media(max-width: 600px){
     .svg_rose{
         left:-75px;
@@ -572,35 +565,19 @@ p.credits_bold {
 }
 .svg_rose{
     position: absolute;
+    top: 7rem;
     max-width:300px;
-    padding-top: 7rem;
     transform: rotate(5deg);
-    z-index: 20;
+    z-index: -1;
 }
 @media(min-width: 601px) {
     .svg_rose{
         position: absolute;
         max-width: 400px;
+    }
+}
 
-    }
-}
-@media(max-width: 600px) {
-    .rose_opac {
-        position: absolute;
-        z-index: -1;
-        min-height: 100vh;
-        right: -40px;
-        min-width: 400px;
-    }
-}
-@media(min-width: 601px){
-    .rose_opac{
-min-width: 1440px;
-        position: absolute;
-        z-index: -1;
-        min-height: 100vh;
-    }
-}
+
 .footer_rose{
     justify-content: center;
     background-color: #101c3d;
@@ -622,7 +599,7 @@ min-width: 1440px;
     .nav--recits .nav__listItem:nth-child(5) .nav__link{
         transform: translate(-375px, 55px);}
     .nav--recits .nav__listItem:nth-child(6) .nav__link{
-        transform: translate(220px, 55px);}
+        transform: translate(240px, 55px);}
     .nav--recits .nav__listItem:nth-child(7) .nav__link{
         transform: translate(-240px, 30px);}
 }
@@ -643,7 +620,6 @@ min-width: 1440px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-left: 13%;
     min-height: 60vh;
 }
 
@@ -672,11 +648,9 @@ min-width: 1440px;
     color: #101c3d;
     text-decoration: none;
     display: block;
-    padding-right: 4rem;
     margin-bottom: 1.5rem;
-    font-size: 2.1rem;
+    font-size: 1.4rem;
     min-width: 30rem;
-    text-align: right;
     line-height: 3rem;
 }
 
@@ -716,7 +690,7 @@ background-color: #101c3d;
 
 .conteneur__rangee{
     min-height: 90vh;
-    min-width: 375px;
+    /*min-width: 375px;*/
   }
 .video__tag {
     position: absolute;
@@ -733,10 +707,6 @@ top:100px;
        left: -0.05rem;
     }
 }
-
-
-
-
 svg{
     min-width: 40px;
     min-height:40px;
