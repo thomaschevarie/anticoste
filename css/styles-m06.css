@@ -78,13 +78,16 @@ body{
 }
 .jeune {
     background-color: #FFD43D;
+    position: absolute;
 }
 #rose {
     width: 100px;
 }
+
 main.conteneur{
     min-height: 80vh;
     min-width: 375px;
+
 }
 header{
     top: 0;
@@ -97,15 +100,14 @@ header {
     width: 100%;
     z-index: 5;
 }
-.entete__accueil {
-    align-content: center;
-}
+
 footer {
     bottom: 0;
     background-color: #FFD43D;
     padding-top: 1.5rem;
     text-align: center;
     list-style-position: inherit;
+    color: #442016;
 }
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
@@ -124,10 +126,11 @@ footer {
 }
 
 .nav--menu .nav__link {
-    color: white;
+    color: #442016;
     display: inline-block;
     padding: 1rem 1rem;
     text-decoration: none;
+    font-family: "Arial Black";
     font-size: 1.4rem;
     border-bottom: 5px solid transparent;
 }
@@ -155,6 +158,17 @@ footer {
 
 }
 
+.gabarit_recit {
+    padding-top: 150px;
+    max-width: 850px;
+}
+
+
+.bandeau{
+    margin-top: 380px;
+    max-width: 1000px;
+}
+
 .pagination{
     display: inline-block;
     margin:1rem;
@@ -164,6 +178,19 @@ footer {
 .rose-des-vents {
     background-image: url("../images/m06/Carte_1440.jpg");
 }
+
+.titre {
+    color: #442016;
+}
+
+.recit {
+    background-image: url("../images/m06/background_2400.jpg");
+}
+
+.texte_recit {
+    background-color: #FFD43D;
+}
+
 .rose-des-vents .conteneur{
     padding-top:70px;
 }
@@ -207,7 +234,7 @@ footer {
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
+    color: #442016;
     text-decoration: none;
     display: block;
     padding-right: 4rem;
@@ -216,6 +243,7 @@ footer {
     min-width: 30rem;
     text-align: right;
     line-height: 3rem;
+    background-color: #FFD43D;
 }
 
 .nav--recits .nav__link:hover {
@@ -240,12 +268,44 @@ footer {
     font-size:5vh;
     padding-top: 5rem;
 }
+
+.texte_intro {
+    margin: 10px;
+    text-align: left;
+}
+
 @media (min-width: 600px) {
     .titre h1{
         font-size:10vh;
         padding: 0;
     }
 }
+.titre__accueil {
+    justify-content: center;
+    color: white;
+}
+
+.titre_h1 {
+    justify-content: center;
+    color: #442016;
+}
+.titre_h2 {
+    text-align: center;
+    color: white;
+    font-family: "Roboto Light";
+    font-size: 32px;
+}
+.titre_h4 {
+    text-align: center;
+    color: white;
+    font-family: "Roboto Light";
+    font-size: 24px;
+}
+.credits {
+    padding-top: 150px;
+    background-color:#442016 ;
+}
+
 .video__tag {
     position: absolute;
     top: 0;
@@ -253,6 +313,13 @@ footer {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+.intro {
+    background-color: #442016;
+    border: 50px;
+}
+.texte_propos {
+    border: 50px;
 }
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
@@ -285,6 +352,12 @@ figure{
     }
 }
 
+.image_intro {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
@@ -292,6 +365,11 @@ figure{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.texteIntro__accueil {
+    font-family: "Roboto Light";
+    font-size: 18px;
+}
+
 .texte .rangee{
     justify-content: center;
     align-items: center;
@@ -320,6 +398,7 @@ figure{
     }
     .texte__infos:hover{
         color: black;
+        background-color: gray;
         transition:color 0.5s;
     }
 }
