@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prenom Nom <courriel>
+ * @author Jean-François Duval <2067006@csfoy.ca>
  *
  * TABLE DES MATIERES
  * Charte typographique
@@ -9,9 +9,11 @@
  * Grille de mise en page
  * Navigations de l'interface (bandeau + pied)
  *** Niveau 1 - Accueil
+ balises picture
  *** Niveau 1 - Rose des vents
  ****** navigation vers les récits
  *** Niveau 1 - Crédits
+ /* Ajout experience immersive
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
  *** Niveau 2 - Gabarit page Texte
@@ -19,42 +21,235 @@
 
 /* Charte typographique
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+h1,
+.h1,
+blockquote,
+.blockquote{
+    font-family: Merriweather, sans-serif;
+    color: white;
+}
+
+h2,
+.h2,
+nav,
+.nav {
+    font-family: Merriweather, sans-serif;
+    color: black;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+figcaption {
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+}
+
+
+/* Base décimale */
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1,
+.h1 { /* = 32px */
+    font-size: 3.2rem;
+}
+
+@media (min-width: 600px) {
+    h1,
+    .h1 { /* = 40px */
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h1,
+    .h1 { /* = 48px */
+        font-size: 4.8rem;
+    }
+}
+
+h2,
+.h2 { /* = 24px */
+    font-size: 2.4rem;
+}
+
+@media (min-width: 600px) {
+    h2,
+    .h2 { /* = 32px */
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h2,
+    .h2 { /* = 36px */
+        font-size: 3.6rem;
+    }
+}
+
+h3,
+.h3 { /* = 18px */
+    font-size: 1.8rem;
+}
+
+@media (min-width: 600px) {
+    h3,
+    .h3 { /* = 24px */
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h3,
+    .h3 { /* = 30px */
+        font-size: 3rem;
+    }
+}
+
+h4,
+.h4 { /* = 16px */
+    font-size: 1.6rem;
+}
+
+@media (min-width: 600px) {
+    h4,
+    .h4 { /* = 18px */
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h4,
+    .h4 { /* = 22px */
+        font-size: 2.2rem;
+    }
+}
 
 /* Styles de base
    ========================================================================== */
-body{
+body {
     color: aliceblue;
-    background-color: #000;
+    /*background-color: aliceblue;*/
+    background-image: url("../images/m03/texture.png")
 }
-blockquote{
-    margin:0;
+
+blockquote {
+    margin: 0;
+}
+.conteneur{
+    padding:0;
 }
 
 /* Grille de mise en page
    ========================================================================== */
-body{
+body {
     display: flex;
-    flex-flow:column wrap;
+    flex-flow: column wrap;
     min-height: 100vh;
 }
-main.conteneur{
+
+main.conteneur {
     min-height: 80vh;
-    min-width: 375px;
 }
-header,
+
+.figcaption {
+    padding-left: 0.5rem;
+}
+.m03__accueil header{
+    background-color: #101c3d;
+    min-height: 175px;
+}
+@media (min-width: 601px) {
+    .m03__accueil header {
+
+        min-height: 200px
+    }
+}@media (min-width: 601px) {
+
+    .m03__titre header {
+        background-color: #101c3d;
+        padding-top: 2rem;
+
+    }
+}
+.h1_cimetiere{
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+@media (min-width: 601px) {
+    .m03__rose-des-vents header {
+        background-color: #101c3d;
+        height: 140px;
+        padding-top: 4rem;
+
+    }
+}
+.footer_index{
+    display: flex;
+    flex-direction: row;
+}
+.footer_index--video{
+    top:330px;
+    position: absolute;
+
+}
+@media(min-width: 601px){
+    .footer_index--video{
+        top:77rem;
+    }
+}
+@media (min-width: 601px) {
+    .m03__accueil header {
+
+        min-height: 230px;
+
+    }
+}
+
 footer {
     color: aliceblue;
-    background-color: rgba(50,50,50,1);
-    position: fixed;
-    width: 100%;
-    z-index: 5;
+       z-index: 5;
 }
-footer {
-    bottom: 0;
-}
-header{
-    top: 0;
-}
+
+
+
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
 /* commun aux différentes navigations - balises nav>ul.nav__list */
@@ -68,72 +263,366 @@ header{
 .nav--menu .nav__list {
     display: flex;
     justify-content: center;
-    margin:0;
 }
+.nav--menu .nav__list--footer{
+    display: flex;
+    justify-content: center;
 
+
+
+}
+.nav--menuIndex{
+    display: inline-block;
+}
 .nav--menu .nav__link {
     color: aliceblue;
     display: inline-block;
-    padding: 1rem 1rem;
     text-decoration: none;
     font-size: 1.4rem;
-    border-bottom: 5px solid transparent;
 }
+
 @media (min-width: 600px) {
     .nav--menu .nav__link {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
         margin: 0 2rem;
+
     }
 }
+
+@media (min-width: 600px) {
+    .nav__listItem {
+        margin: 0 8rem 0 7rem;
+        /*padding-bottom: 3rem;*/
+    }
+}
+
 .nav--menu .nav__link:hover {
     text-decoration: underline;
 }
+
 .nav--menu .switch:hover {
     transform: scale(2.25);
     text-decoration: none;
     transition: all 0.3s;
 }
-.nav--menu .nav__link--active {
-    color:#ecf4f8;
-    border-bottom: 5px solid #ecf4f8;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background: rgb(236,244,248);
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */
-    background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);
-    /*background-color: #434343;*/
+
+/*.nav--menu .nav__link--active {*/
+/*    color: #ecf4f8;*/
+/*    border-bottom: 5px solid #ecf4f8;*/
+/*    border-top-left-radius: 20px;*/
+/*    border-top-right-radius: 20px;*/
+/*    background: rgb(236, 244, 248);*/
+/*    !* tests et code du dégradé faits avec https://cssgradient.io/ *!*/
+/*    background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);*/
+/*    !*background-color: #434343;*!*/
+/*}*/
+
+ul .nav__list {
+    position: relative;
 }
-.pagination{
-    display: inline-block;
-    margin:1rem;
+
+.svg__immersive {
+    margin-top: 3rem;
+    /*margin-left: 2rem;*/
 }
-/* Niveau 1 - Rose des vents
-   ================== */
-.rose-des-vents {
-    background-image: url("../images/m99/carte-navigation_1200.jpg");
-    background-size: cover;
+.nav__listItem--pagination{
+
+    text-align: center;
 }
-.rose-des-vents .conteneur{
-    padding-top:70px;
+@media(min-width: 601px) {
+    .nav__listItem--pagination{
+        /*padding:0 16rem 10rem 16rem;*/
+    }
 }
-/* navigation vers les récits */
-.nav--recits {
-    font-family: 'Roboto Condensed', sans-serif;
+
+
+/*Niveau 1 - Accueil
+======================*/
+.anticoste_accueil {
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+@media (min-width: 601px) {
+    .anticoste_accueil {
+        /*margin: 1rem 0 1rem 0;*/
+    }
+}
+
+.p1 {
+    /*margin: 1rem;*/
+}
+
+@media (max-width: 600px) {
+    .h2_septRecits,
+    .h2_immersive {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .h2_exposition {
+        color: white;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .p2 {
+        color: white;
+        /*padding: 0 0 3rem 0;*/
+    }
+}
+
+@media (min-width: 601px) {
+    .p2 {
+        color: white;
+
+    }
+}
+
+.p1,
+.p2,
+.p3,
+.p4,
+.p5 {
+    /*padding: 0 1rem;*/
+}
+@media(min-width: 601px){
+    .p5{
+        margin:0;
+        padding: 0;
+    }
+}
+
+.bleed {
+    background-color: #101c3d;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 601px) {
+    .h2_exposition,
+    .p_exposition,
+    p {
+        color: white;
+        /*margin: 10px;*/
+    }
+}
+
+@media (min-width: 601px) {
+    .rangee {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 601px) {
+    .cols_6_de_12 {
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+}
+
+/* Ajout experience immersive
+=================================================*/
+@media(min-width: 601px){
+.experienceImmersive {
+    /*padding-left: 3rem;*/
+}
+}
+.kbd {
+    color: black;
     font-weight: bold;
 }
+
+
+.dt {
+    font-size: 2rem;
+    }
+
+.dd {
+    text-align: left;
+    background-color: #142D7A;
+    color: white;
+    max-width: 100px;
+    /*margin:1rem 0 2rem 0;*/
+
+
+}
+
+.cmd {
+    /*padding-left: 1.4rem*/
+}
+
+.f11 {
+    /*padding-left: 1.5rem;*/
+
+}
+
+@media (min-width: 601px) {
+    .cols_6_de_12 {
+        width: 90%;
+        /*margin-left: 2rem;*/
+    }
+}
+
+.button {
+    background-color: #1A3375;
+    max-width: 400px;
+    color: white;
+    /*padding: 1rem 1.4rem;*/
+    /*margin: 4rem 0 2rem 2rem;*/
+    justify-content: center;
+
+}
+
+
+.footer_credits .cols_4_de_12 {
+    float:right;
+    /*margin-right: 2rem;*/
+}
+
+small {
+    align-content: center;
+}
+
+/*Niveau 1 - Crédits
+======================*/
+
+.header_credits{
+    background-color: #101c3d;
+    padding-top: 2rem;
+}
+.m03__credits header{
+padding-top: 2rem;
+}
+@media(max-width: 600px) {
+    .main_credits{
+        background-image: url("../images/m03/credits_opac_600.png");
+        background-size: cover;
+    }
+}
+@media(min-width: 601px)  {
+    .main_credits {
+        background-image: url("../images/m03/credits_opac_1440.png");
+        background-size: cover;
+    }
+}
+
+
+p {
+    color: black;
+
+}
+
+p.credits_bold {
+    font-weight: bold;
+    color: black;
+}
+
+.credits_bloc_1 {
+    padding: 1rem;
+    color: black;
+}
+
+.credits_bloc_1 p {
+    color: black;
+}
+
+.credits_bloc_2 {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+}
+
+.credits_bloc_2 p {
+    color: black;
+}
+
+/* Niveau 1 - Rose des vents
+   ================== */
+.body_rose{
+    background-image: url("../images/m03/carte_opac_rose_600.jpg");
+}
+@media(min-width: 601px) {
+    .body_rose {
+        background-image: url("../images/m03/carte_opac_rose_2000.jpg");
+        background-size: cover;
+    }
+}
+
+.cols_5_de_12{
+    position: absolute;
+}
+
+
+
+@media(max-width: 600px){
+    .svg_rose{
+        left:-75px;
+    }
+}
+.svg_rose{
+    position: absolute;
+    top: 7rem;
+    max-width:300px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+@media(min-width: 601px) {
+    .svg_rose{
+        position: absolute;
+        max-width: 400px;
+    }
+}
+
+
+.footer_rose{
+    justify-content: center;
+    background-color: #101c3d;
+    margin-top:16rem;
+}
+.pagination_rose{
+    color: white;
+}
+@media(min-width: 601px){
+    .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        transform: translate(-190px, 85px);
+    }
+    .nav--recits .nav__listItem:nth-child(2) .nav__link{
+        transform: translate(180px, 55px); }
+    .nav--recits .nav__listItem:nth-child(3) .nav__link{
+        transform: translate(-350px, 55px);}
+    .nav--recits .nav__listItem:nth-child(4) .nav__link{
+        transform: translate(300px, 55px);}
+    .nav--recits .nav__listItem:nth-child(5) .nav__link{
+        transform: translate(-375px, 55px);}
+    .nav--recits .nav__listItem:nth-child(6) .nav__link{
+        transform: translate(240px, 55px);}
+    .nav--recits .nav__listItem:nth-child(7) .nav__link{
+        transform: translate(-240px, 30px);}
+}
+    /* navigation vers les récits */
+    .nav--recits {
+        font-family: 'Merriweather', sans-serif;
+        font-weight: bold;
+    }
+
 @media (min-width: 600px) {
     .nav--recits {
         display: flex;
         justify-content: center;
     }
 }
+
 .nav--recits .nav__list {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-left: 13%;
     min-height: 60vh;
 }
+
 @media (min-width: 600px) {
     .nav--recits .nav__list {
         min-height: auto;
@@ -156,14 +645,12 @@ header{
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
+    color: #101c3d;
     text-decoration: none;
     display: block;
-    padding-right: 4rem;
     margin-bottom: 1.5rem;
-    font-size: 2.1rem;
+    font-size: 1.4rem;
     min-width: 30rem;
-    text-align: right;
     line-height: 3rem;
 }
 
@@ -180,55 +667,79 @@ header{
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
-.titre .rangee{
+.header_titre{
+background-color: #101c3d;
+}
+.titre .rangee {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.titre h1{
-    font-size:5vh;
-    padding-top: 5rem;
+
+.titre h1 {
+    font-size: 5vh;
+    padding-top: 3rem;
 }
-@media (min-width: 600px) {
-    .titre h1{
-        font-size:10vh;
+
+@media (min-width: 601px) {
+    .titre h1 {
+        font-size: 10vh;
         padding: 0;
     }
 }
+
+.conteneur__rangee{
+    min-height: 90vh;
+    /*min-width: 375px;*/
+  }
 .video__tag {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -160px;
+    left: 25px;
     width: 100%;
     height: 100%;
     z-index: -1;
+ align-items: center;
+}
+@media(min-width: 601px){
+    .video__tag{
+top:100px;
+       left: -0.05rem;
+    }
+}
+svg{
+    min-width: 40px;
+    min-height:40px;
 }
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
-.photo img{
-    /*max-width: 90%;*/
+.photo img {
+    max-width: 100%;
+
 }
-figure{
+
+figure {
     position: relative;
-    margin:0;
+    margin: 0;
 }
-.photo figure{
-    margin-bottom:10rem;
-}
+
+
 .photo figcaption {
     color: aliceblue;
-    background-color: #434343;
+    background-color: aliceblue;
     padding: 2rem;
 }
+
 @media (min-width: 600px) {
     .photo figcaption {
         position: absolute;
-        width:100%;
-        bottom:0;
-        opacity:0;
+        width: 100%;
+        bottom: 0;
+        opacity: 0;
     }
+
     .photo figcaption:hover {
-        opacity:0.85;
+        opacity: 0.85;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -236,39 +747,56 @@ figure{
 
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
-.texte{
+.texte {
     background-image: url("../demo-recit/images/i-txt-m99.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.texte .rangee{
+
+.texte .rangee {
     justify-content: center;
     align-items: center;
-    color:#000;
+    color: #000;
 }
-.texte__contenu{
+
+.texte__contenu {
     padding: 70px 2rem;
-    font-size:1.8rem;
+    font-size: 1.8rem;
 }
+
 @media (min-width: 600px) {
-    .texte__contenu{
-        font-size:2.1rem;
+    .texte__contenu {
+        font-size: 2.1rem;
     }
 }
-.texte__infos{
+
+.texte__infos {
     color: aliceblue;
     background-color: #434343;
     font-size: 1.6rem;
     padding: 1rem;
 }
+
 @media (min-width: 600px) {
-    .texte__infos{
+    .texte__infos {
         color: transparent;
-        background-color:transparent;
+        background-color: transparent;
         cursor: help;
     }
-    .texte__infos:hover{
+
+    .texte__infos:hover {
         color: black;
-        transition:color 0.5s;
+        transition: color 0.5s;
     }
 }
+
+/*grid 12 colonnes*/
+/*@media (min-width: 600px) {*/
+/*    .conteneur {*/
+/*        margin: 0 auto;*/
+/*        max-width: 1000px;*/
+/*        padding: 0;*/
+/*        !* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage *!*/
+/*        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;*/
+/*    }*/
+/*}*/
