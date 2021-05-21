@@ -1,28 +1,37 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
-
- /** @author Prenom Nom <courriel>*/
- /***/
- /** TABLE DES MATIERES*/
- /** Charte typographique*/
- /** Styles de base*/
- /** Grille de mise en page*/
- /** Navigations de l'interface (bandeau + pied)*/
- /**** Niveau 1 - Accueil*/
- /**** Niveau 1 - Rose des vents*/
- /******* navigation vers les récits*/
- /**** Niveau 1 - Crédits*/
- /**** Niveau 2 - Gabarit page Titre*/
- /**** Niveau 2 - Gabarit page Photo*/
- /**** Niveau 2 - Gabarit page Texte*/
-
-
-/* Charte typographique
-   ========================================================================== */
+/**
+ * @author Camille Marceau <2063511@csfoy.ca>
+ *
+ * TABLE DES MATIERES
+ * Charte typographique
+ * Styles de base
+ * Grille de mise en page
+ * Navigations de l'interface (bandeau + pied)
+ *** Niveau 1 - Accueil
+        * Intro
+        * Sept récits numériques
+        * Expérience Immersive
+        * Photo panoramique
+        * Footer accueil
+ *** Niveau 1 - Rose des vents
+ ****** navigation vers les récits
+ *** Niveau 1 - À propos
+ *** Niveau 2 - Gabarit page Titre
+ *** Niveau 2 - Gabarit page Photo
+ *** Niveau 2 - Gabarit page Textes
+ */
 @import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Della+Respira&display=swap');
 
 :root {
-    /** Style camillemarceau07 [m02] **/
+    /** Style camillemarceau07 [m07] **/
     /* les caractères */
     --m02-font-titre: 'Della Respira', serif;
     --m02-font-principale: 'Arsenal', sans-serif;
@@ -46,8 +55,11 @@
     --m02-fontSize-h1-large: 11rem;
     --m02-fontSize-accueil-h2-small: 5rem;
     --m02-fontSize-accueil-h2-large: 9rem;
+    --m02-fontSize-credits-h1-small: 5rem;
+    --m02-fontSize-credits-h1-large: 8rem;
     --m02-fontSize-credits-h2-small: 3rem;
     --m02-fontSize-credits-h2-large: 3rem;
+    --m02-fontSize-credits-h3: 1.8rem;
     /* ombre */
     --m02-ombre: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
@@ -65,33 +77,36 @@ h4,
 .h4 {
     font-family: 'Della Respira', serif;
 }
-body{
+
+body {
     font-family: 'Arsenal', sans-serif;
 }
 
 
 /* Base décimale */
-html{
+html {
     font-size: 62.5%;
 }
 
 
 body {
     /* 16px pour toutes les largeurs d'écran */
-    font-size: 1.6rem;
+    font-size: var(--m02-fontSize-interface-small);
     /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
     line-height: 1.375;
 }
+
 @media (min-width: 600px) {
     body {
         line-height: 1.5;
-        font-size: 1.8rem;
+        font-size: var(--m02-fontSize-interface-large);
     }
 }
+
 @media (min-width: 800px) {
     body {
         line-height: 1.75;
-        font-size: 1.8rem;
+        font-size: var(--m02-fontSize-interface-large);
     }
 }
 
@@ -99,19 +114,21 @@ body {
 /* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
 h1,
 .h1 { /* = 50px */
-    font-size: 5rem;
+    font-size: var(--m02-fontSize-h1-small);
     font-weight: normal;
 }
+
 @media (min-width: 600px) {
     h1,
     .h1 { /* = 110px */
-        font-size: 11rem;
+        font-size: var(--m02-fontSize-h1-large);
     }
 }
+
 @media (min-width: 800px) {
     h1,
     .h1 { /* = 110px */
-        font-size: 11rem;
+        font-size: var(--m02-fontSize-h1-large);
     }
 }
 
@@ -120,12 +137,14 @@ h2,
     font-size: 5rem;
     font-weight: normal;
 }
+
 @media (min-width: 600px) {
     h2,
     .h2 { /* = 30px */
         font-size: 9rem;
     }
 }
+
 @media (min-width: 800px) {
     h2,
     .h2 { /* = 30px */
@@ -137,12 +156,14 @@ h3,
 .h3 { /* = 18px */
     font-size: 1.8rem;
 }
+
 @media (min-width: 600px) {
     h3,
-    .h3 {  /* = 24px */
+    .h3 { /* = 24px */
         font-size: 2.4rem;
     }
 }
+
 @media (min-width: 800px) {
     h3,
     .h3 { /* = 30px */
@@ -154,6 +175,7 @@ h4,
 .h4 { /* = 16px */
     font-size: 1.6rem;
 }
+
 @media (min-width: 600px) {
     h4,
     .h4 { /* = 18px */
@@ -171,46 +193,64 @@ h4,
 
 /* Styles de base
    ========================================================================== */
-body{
+body {
     color: white;
     background-color: #1e1e1e;
 }
-blockquote{
-    margin:0;
+
+blockquote {
+    margin: 0;
 }
 
 
 /* Grille de mise en page
    ========================================================================== */
-body{
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow:column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
     min-height: 100vh;
     background-image: url("../images/m02/carte_1200.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-main.conteneur{
+
+main.conteneur {
     min-height: 80vh;
     min-width: 375px;
 }
-header{
+
+header {
     top: 0;
-    background-image: url("../images/m02/bg_nav_principale.svg");
+    background-image: url("../images/m07/bg_nav_principale.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-header {
     position: fixed;
     width: 100%;
-    z-index: 5;
 }
+
+@media (max-width: 600px) {
+    header {
+        background-image: url("../images/m07/bg_nav_principale_600.svg");
+    }
+}
+
 footer {
     bottom: 0;
     background-color: #1e1e1e;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
     padding-top: 1.5rem;
+}
+
+.footer__recits {
+    position: fixed;
+    width: 100%;
 }
 
 /* Navigations de l'interface (bandeau + pied)
@@ -224,9 +264,29 @@ footer {
 
 /* navigations menu principal*/
 .nav--menu .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    margin:0;
+    margin: 0;
+}
+
+.nav__footer--recit .nav__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav--principale .nav__listItem:nth-child(1), .nav--principale .nav__listItem:nth-child(3) {
+    padding-top: 3rem;
+}
+
+@media (min-width: 600px) {
+    .nav--principale .nav__listItem:nth-child(1), .nav--principale .nav__listItem:nth-child(3) {
+        padding-top: 2rem;
+    }
 }
 
 .nav--menu .nav__link {
@@ -236,213 +296,57 @@ footer {
     text-decoration: none;
     font-size: 1.6rem;
     letter-spacing: 0.25em;
-    border-bottom: 5px solid transparent;
 }
+
 @media (min-width: 600px) {
     .nav--menu .nav__link {
         font-size: 2.6rem;
         margin: 0 2rem;
     }
 }
-.nav__roseDesVents {
-    left: -300px;
+
+.nav--menu .nav__link:hover, .nav--menu .nav__link:focus {
+    color: var(--m02-gold);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
-.nav--menu .nav__link:hover {
-    color: #996A0F;
+
+.icone--roseDesVents {
+    width: 67px;
+    margin-left: 1rem;
+    margin-right: 1.6rem;
 }
-.nav__roseDesVents:hover {
+
+@media (min-width: 600px) {
+    .icone--roseDesVents {
+        width: 100px;
+        margin-right: 2rem;
+    }
+}
+
+.icone--roseDesVents:hover, .icone--roseDesVents:focus {
     fill: white;
+    -webkit-transition: fill 0.3s;
+    -o-transition: fill 0.3s;
+    transition: fill 0.3s;
 }
-.nav--menu .switch:hover {
+
+.nav--menu .switch:hover, .nav--menu .switch:focus {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
     text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     fill: #fff;
 }
-.nav--menu .nav__link--active {
-    /*color:#ecf4f8;*/
-    /*border-bottom: 5px solid #ecf4f8;*/
-    /*border-top-left-radius: 20px;*/
-    /*border-top-right-radius: 20px;*/
-    /*background: rgb(236,244,248);*/
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */
-    /*background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);*/
-    /*background-color: #434343;*/
-}
-.pagination{
+
+.pagination {
     display: inline-block;
-    margin:1rem;
+    margin: 1rem;
     font-family: 'Arsenal', sans-serif;
-}
-/* Niveau 1 - Rose des vents
-   ================== */
-.rose-des-vents {
-    background-image: url("../images/m02/carte_1200.jpg");
-    background-size: cover;
-}
-.rose-des-vents .conteneur{
-    padding-top:70px;
-}
-/* navigation vers les récits */
-.nav--recits {
-    font-family: 'Della Respira', serif;
-}
-@media (min-width: 600px) {
-    .nav--recits {
-        display: flex;
-        justify-content: center;
-    }
-}
-.nav--recits .nav__list {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    padding-left: 13%;
-    min-height: 60vh;
-}
-@media (min-width: 600px) {
-    .nav--recits .nav__list {
-        min-height: auto;
-        padding-left: 0;
-        margin-right: 2%;
-    }
-}
-
-.nav--recits picture {
-    position: absolute;
-    top: 200px;
-    opacity: 0.25;
-}
-
-@media (min-width: 600px) {
-    .nav--recits picture {
-        position: static;
-        opacity: 0.85;
-    }
-}
-
-.nav--recits .nav__link {
-    color: #996A0F;
-    text-decoration: none;
-    display: block;
-    padding-right: 4rem;
-    margin-bottom: 1.5rem;
-    font-size: 2.1rem;
-    min-width: 30rem;
-    text-align: right;
-    line-height: 3rem;
-}
-
-.nav--recits .nav__link:hover {
-    text-decoration: underline;
-    /*color: #b22a2a; !* la dominante dans la main *!*/
-    font-size: 2.15rem;
-    /*background-image: url("../images/m99/main.png");*/
-    /*background-position: right;*/
-    /*background-size: 3.5rem;*/
-    /*background-repeat: no-repeat;*/
-    transition: font-size 0.3s;
-}
-
-/* Niveau 2 - Gabarit page Titre
-   ========================================================================== */
-.titre .rangee{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titre h1{
-    font-size:5vh;
-    padding-top: 5rem;
-}
-@media (min-width: 600px) {
-    .titre h1{
-        font-size:10vh;
-        padding: 0;
-    }
-}
-.video__tag {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-/* Niveau 2 - Gabarit page Photo
-   ========================================================================== */
-.photo img{
-    /*max-width: 90%;*/
-}
-figure{
-    position: relative;
-    margin-top: 15rem;
-}
-.photo figure{
-    margin-bottom:10rem;
-}
-.photo figcaption {
-    color: white;
-    background-color: #3d4236;
-    padding: 2rem;
-}
-@media (min-width: 600px) {
-    .photo figcaption {
-        position: absolute;
-        width:100%;
-        height: 100%;
-        bottom:0;
-        opacity:0;
-        text-align: center;
-        padding-top: 30%;
-    }
-    .photo figcaption:hover {
-        opacity:0.85;
-        transition: opacity 0.5s;
-        cursor: help;
-    }
-}
-
-/* Niveau 2 - Gabarit page Texte
-   ========================================================================== */
-.texte{
-    background-image: url("../images/m02/bg_texte_1200.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.texte .rangee{
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-}
-.texte__contenu{
-    padding: 70px 2rem;
-    font-size:1.8rem;
-    font-family: 'Della Respira', serif;
-}
-@media (min-width: 600px) {
-    .texte__contenu{
-        font-size:2.1rem;
-    }
-}
-.texte__infos{
-    color: fff;
-    background-color: #434343;
-    font-size: 1.6rem;
-    padding: 1rem;
-}
-@media (min-width: 600px) {
-    .texte__infos{
-        color: transparent;
-        background-color:transparent;
-        cursor: help;
-        font-family: 'Arsenal', sans-serif;
-    }
-    .texte__infos:hover{
-        color: #fff;
-        transition:color 0.5s;
-
-    }
 }
 
 /* Niveau 1 - Accueil
@@ -451,11 +355,13 @@ figure{
 .entete__accueil img {
     width: 100%;
     height: auto;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
+/******* Intro *******/
 .intro {
     background-color: var(--m02-vert);
+    -webkit-box-shadow: var(--m02-ombre);
     box-shadow: var(--m02-ombre);
     margin-top: -1rem;
     padding-bottom: 7rem;
@@ -480,9 +386,14 @@ figure{
         background-image: url("../images/m07/main_accueil_700.png");
         background-repeat: no-repeat;
         background-position: left;
+        -webkit-box-shadow: var(--m02-ombre);
         box-shadow: var(--m02-ombre);
     }
+
     .intro .rangee {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-bottom: 7rem;
     }
@@ -497,6 +408,7 @@ figure{
     }
 }
 
+/******* Sept récits numériques *******/
 .septRecitsNum {
     color: var(--m02-vert);
     padding-top: 4rem;
@@ -521,6 +433,7 @@ figure{
     background-position: center;
     height: 43rem;
     padding-top: 7rem;
+    -webkit-box-shadow: var(--m02-ombre);
     box-shadow: var(--m02-ombre);
     margin-top: 5rem;
 }
@@ -566,16 +479,533 @@ figure{
 
 }
 
+/******* Expérience Immersive *******/
 .experieneImmersive {
     background-color: var(--m02-noir);
-    padding-top: 2rem;
+    padding: 4rem 4rem 8rem 4rem;
+    background-image: url("../images/m07/roseDesVents_accueil_211.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+    -webkit-box-shadow: var(--m02-ombre);
+    box-shadow: var(--m02-ombre);
 }
 
-.texteExpImm__accueil {
-    margin-left: 2rem;
-    margin-right: 2rem;
+@media (min-width: 600px) {
+    .experieneImmersive {
+        background-image: url("../images/m07/roseDesVents_accueil_384.png");
+        background-position: left;
+    }
+}
+
+.experieneImmersive p {
+    margin-top: 5rem;
 }
 
 .titreExpImm__accueil {
     line-height: 92%;
+}
+
+.texteExpImm__accueil {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .titreExpImm__accueil {
+        margin-left: 8.5%;
+        text-align: right;
+    }
+
+    .texteExpImm__accueil {
+        margin-left: 42.5%;
+    }
+}
+
+.pleinEcran {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+/** Instructions expérience immersive **/
+kbd {
+    font-size: 0.85em;
+    border: 1px solid;
+    border-bottom-width: 2px;
+    border-color: #ddd #bbb #bbb #ddd;
+    background: var(--m02-beige);
+    padding: 1px 3px;
+    white-space: nowrap;
+    border-radius: 3px;
+    color: var(--m02-noir);
+}
+
+@media (min-width: 600px) {
+    kbd:last-of-type {
+        width: 6rem;
+        text-align: center;
+    }
+}
+
+dl.rangee {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media (min-width: 600px) {
+    dt:nth-of-type(2) {
+        margin-left: 5rem;
+    }
+}
+
+.instruction {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 599px) {
+    .instruction:last-of-type {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .instruction:last-of-type {
+        margin-left: 4rem;
+    }
+}
+
+dd {
+    margin-left: 1rem;
+}
+
+/*** Bouton «Vivre l'expérience» ***/
+.vivreLexperience {
+    color: var(--m02-blanc);
+    text-decoration: none;
+    border: 2px solid var(--m02-gold);
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    width: 23rem;
+    margin: auto;
+}
+
+.vivreLexperience:hover, .vivreLexperience:focus {
+    background-color: var(--m02-gold);
+    color: var(--m02-noir);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+/******* Photo panoramique *******/
+.panoramique img {
+    width: 100%;
+}
+
+/******* Footer accueil *******/
+
+.footer__accueil {
+    margin-top: -1rem;
+}
+
+.copyright__accueil {
+    text-align: center;
+}
+
+.icone--roseDesVents__accueil {
+    width: 80%;
+    margin-top: -2rem;
+}
+
+/* Niveau 1 - Rose des vents
+   ================== */
+.rose-des-vents {
+    background-image: url("../images/m02/carte_1200.jpg");
+    background-size: cover;
+}
+
+.rose-des-vents .conteneur {
+    padding-top: 70px;
+}
+
+/* navigation vers les récits */
+.nav--recits {
+    font-family: 'Della Respira', serif;
+}
+
+@media (min-width: 600px) {
+    .nav--recits {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 90px;
+    }
+}
+
+.nav--recits .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 13%;
+    min-height: 60vh;
+}
+
+@media (min-width: 600px) {
+    .nav--recits .nav__list {
+        min-height: auto;
+        padding-left: 0;
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 599px) {
+    .nav--recits picture {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 199px;
+    }
+}
+
+@media (min-width: 600px) {
+    .nav--recits picture {
+        position: absolute;
+        width: 420px;
+        z-index: -1;
+        top: 200px;
+    }
+}
+
+/* positionnement des liens autour de la rose des vents */
+@media (max-width: 599px) {
+    .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        -webkit-transform: translate(-30px, -50px);
+        -ms-transform: translate(-30px, -50px);
+        transform: translate(-30px, -50px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(2) .nav__link {
+        -webkit-transform: translate(70px, -40px);
+        -ms-transform: translate(70px, -40px);
+        transform: translate(70px, -40px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(3) .nav__link {
+        -webkit-transform: translate(110px, -30px);
+        -ms-transform: translate(110px, -30px);
+        transform: translate(110px, -30px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(4) .nav__link {
+        -webkit-transform: translate(140px, -10px);
+        -ms-transform: translate(140px, -10px);
+        transform: translate(140px, -10px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(5) .nav__link {
+        -webkit-transform: translate(100px, 10px);
+        -ms-transform: translate(100px, 10px);
+        transform: translate(100px, 10px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(6) .nav__link {
+        -webkit-transform: translate(70px, 30px);
+        -ms-transform: translate(70px, 30px);
+        transform: translate(70px, 30px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(7) .nav__link {
+        -webkit-transform: translate(10px, 40px);
+        -ms-transform: translate(10px, 40px);
+        transform: translate(10px, 40px);
+    }
+}
+
+@media (min-width: 600px) {
+    .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        -webkit-transform: translate(230px, 150px);
+        -ms-transform: translate(230px, 150px);
+        transform: translate(230px, 150px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(2) .nav__link {
+        -webkit-transform: translate(250px, 260px);
+        -ms-transform: translate(250px, 260px);
+        transform: translate(250px, 260px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(3) .nav__link {
+        -webkit-transform: translate(140px, 370px);
+        -ms-transform: translate(140px, 370px);
+        transform: translate(140px, 370px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(4) .nav__link {
+        -webkit-transform: translate(-130px, 435px);
+        -ms-transform: translate(-130px, 435px);
+        transform: translate(-130px, 435px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(5) .nav__link {
+        -webkit-transform: translate(-360px, 250px);
+        -ms-transform: translate(-360px, 250px);
+        transform: translate(-360px, 250px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(6) .nav__link {
+        -webkit-transform: translate(-440px, 30px);
+        -ms-transform: translate(-440px, 30px);
+        transform: translate(-440px, 30px);
+    }
+
+    .nav--recits .nav__listItem:nth-child(7) .nav__link {
+        -webkit-transform: translate(-330px, -170px);
+        -ms-transform: translate(-330px, -170px);
+        transform: translate(-330px, -170px);
+    }
+}
+
+.nav--recits .nav__link {
+    color: var(--m02-gold);
+    text-decoration: none;
+    display: block;
+    padding-right: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+    min-width: 30rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+@media (min-width: 600px) {
+    .nav--recits .nav__link {
+        text-align: right;
+    }
+}
+
+.nav--recits .nav__link:hover, .nav--recits .nav__link:focus {
+    text-decoration: underline;
+    font-size: 2.15rem;
+    -webkit-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
+    transition: font-size 0.3s;
+}
+
+/* Niveau 1 - À propos
+   ================== */
+body.credits {
+    background-image: url("../images/m07/bg_credits_1000.jpg");
+}
+
+@media (min-width: 600px) {
+    body.credits {
+        background-image: url("../images/m07/bg_credits_2000.jpg");
+    }
+}
+
+.credits_contenus {
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 600px) {
+
+    .credits_contenus {
+        padding: 5rem 2rem 10rem 2rem;
+    }
+}
+
+.texte_credits {
+    color: var(--m02-noir);
+    margin-top: 12rem;
+}
+
+@media (min-width: 600px) {
+    .h1_credit {
+        font-size: var(--m02-fontSize-credits-h1-large);
+        line-height: 100%;
+    }
+}
+
+.h2_credit {
+    font-size: var(--m02-fontSize-credits-h2-small)
+}
+
+.h3_credit {
+    margin-top: 4rem;
+    margin-bottom: -1rem;
+    font-size: var(--m02-fontSize-credits-h3);
+    line-height: 100%;
+}
+
+.p_credit {
+    margin-top: 0;
+}
+
+.p_credit a {
+    color: var(--m02-noir);
+}
+
+.p_credit a:hover, .p_credit a:focus {
+    color: var(--m02-gold);
+}
+
+.logoFondRecherche img {
+    margin: 2rem 0 3rem 0;
+}
+
+.ligne {
+    margin-top: 0;
+}
+
+/* Niveau 2 - Gabarit page Titre
+   ========================================================================== */
+.titre .rangee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.titre h1 {
+    font-size: 5vh;
+    padding-top: 5rem;
+}
+
+@media (min-width: 600px) {
+    .titre h1 {
+        font-size: 10vh;
+        padding: 0;
+    }
+}
+
+.video__tag {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    /*width: 100%;*/
+    height: 100%;
+    z-index: -1;
+}
+
+@media ( min-width: 600px) {
+    .video__tag {
+        width: auto;
+        height: 100vh;
+    }
+}
+
+
+/* Niveau 2 - Gabarit page Photo
+   ========================================================================== */
+/* image */
+.photo figure {
+    position: relative;
+    margin-top: 13rem;
+}
+
+/* légende */
+.photo figcaption {
+    color: white;
+    background-color: #3d4236;
+    padding: 2rem;
+}
+
+@media (min-width: 600px) {
+    .photo figcaption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        opacity: 0;
+        text-align: center;
+        padding-top: 30%;
+    }
+
+    .photo figcaption:hover, .photo figcaption:focus {
+        opacity: 0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        cursor: help;
+    }
+}
+
+/* Niveau 2 - Gabarit page Texte
+   ========================================================================== */
+.texte {
+    background-image: url("../images/m02/bg_texte_1200.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texte .rangee {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+.texte__contenu {
+    padding: 70px 2rem;
+    font-size: 1.8rem;
+    font-family: 'Della Respira', serif;
+    margin-top: 5rem;
+}
+
+@media (min-width: 600px) {
+    .texte__contenu {
+        font-size: 2.1rem;
+    }
+}
+
+/* légende */
+.texte__infos {
+    color: #fff;
+    background-color: var(--m02-noir);
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+@media (min-width: 600px) {
+    .texte__infos {
+        color: transparent;
+        background-color: transparent;
+        cursor: help;
+        font-family: 'Arsenal', sans-serif;
+    }
+
+    .texte__infos:hover, .texte__infos:focus {
+        color: #fff;
+        -webkit-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s;
+
+    }
 }

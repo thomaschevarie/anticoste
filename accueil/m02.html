@@ -89,46 +89,74 @@
         </div>
     </section>
     <section class="experieneImmersive">
-        <div class="rangee texteExpImm__accueil">
-            <h2 class="titreExpImm__accueil">Expérience immersive</h2>
-            <p>
-                Afin de vivre pleinement l’expérience immersive du parcours des sept récits, activez l’affichage plein écran
-                à l’aide du bouton en haut d’écran.
-            </p>
-            <p>
-                Pour revenir en mode d’affichage régulier, appuyer sur la touche «escape» sur votre clavier.
-            </p>
-            <p>
-                La navigation entre les pages de chaque récit est possible en utilisant les flèches de votre clavier ou par
-                balayage du doigt sur votre mobile.
-            </p>
+        <div class="conteneur">
+            <h2 class="titreExpImm__accueil cols_11_de_12">Expérience immersive</h2>
+            <div class="rangee cols_7_de_12 texteExpImm__accueil">
+                <p>
+                    Afin de vivre pleinement l’expérience immersive du parcours des sept récits, activez l’affichage
+                    plein
+                    écran à l’aide des touches illustrées ci-dessous.
+                </p>
+                <dl class="rangee">
+                    <div class="instruction flxRow">
+                        <dt>MacOs&nbsp;:</dt>
+                        <dd>
+                            <kbd aria-label="Touche contrôle">Ctrl ˆ</kbd>
+                            <kbd aria-label="Touche commande">Cmd ⌘</kbd>
+                            <kbd aria-label="Touche F">F</kbd>
+                        </dd>
+                    </div>
+                    <div class="instruction flxRow">
+                        <dt>Windows&nbsp;:</dt>
+                        <dd><kbd aria-label="Touche F11">F11</kbd></dd>
+                    </div>
+                </dl>
+                <p>
+                    Pour revenir en mode d’affichage régulier, appuyer sur la touche «escape».
+                </p>
+                <kbd aria-label="Touche Escape">Échap</kbd>
+                <p>
+                    La navigation entre les pages de chaque récit est possible en utilisant les flèches de votre
+                    clavier.
+                </p>
+                <p><a href="../rose-des-vents/m07.html" class="vivreLexperience">Vivre l'expérience</a></p>
+            </div>
         </div>
     </section>
-    <picture>
+    <picture class="panoramique">
         <source
                 media="(max-width: 600px)"
-                srcset="">
+                srcset="../images/m07/panoramique_accueil_600.jpg">
         <source
                 media="(min-width: 601px)"
-                srcset="">
-        <img src=""
+                srcset="../images/m07/panoramique_accueil_1440.jpg">
+        <img src="../images/m07/panoramique_accueil_600.jpg"
              alt="Vue panoramique de l'île d'Anticosti">
     </picture>
 </main>
-<footer>
-    <nav class="nav--footer" role="navigation">
+<footer role="contentinfo" class="footer__accueil">
+    <nav class="nav nav--menu nav--footer" role="navigation">
         <ul class="nav__list">
             <li class="nav__listItem">
-                <a class="nav__link nav__link--active"
-                   href="../accueil/m02.html">Anticoste</a></li>
+                <a class="nav__link"
+                   href="../accueil/m07.html">Anticoste</a></li>
+            <li class="nav__listItem nav__roseDesVents">
+                <a class="nav__link"
+                   href="../rose-des-vents/m07.html">
+                    <svg class="icone--roseDesVents" width="90" height="90" viewBox="0 0 100 100" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <title>Rose des vents</title>
+                        <path class="icone--roseDesVents"
+                              d="M62.5 37.5L50 0L37.5 37.5L0 50L37.5 62.5L50 100L62.5 62.5L100 50L62.5 37.5ZM16.6667 50L41.6667 41.6667L45.8333 50H16.6667ZM50 83.3333L41.6667 58.3333L50 54.1667V83.3333ZM50 16.6667L58.3333 41.6667L50 45.8333V16.6667ZM58.3333 58.3333L54.1667 50H83.3333L58.3333 58.3333ZM36.25 72.0833L20.8333 79.1667L27.9167 63.75L34.5833 65.8333L36.25 72.0833ZM72.0833 63.75L79.1667 79.1667L63.75 72.0833L65.8333 65.4167L72.0833 63.75ZM27.9167 36.25L20.8333 20.8333L36.25 27.9167L34.1667 34.1667L27.9167 36.25ZM63.75 27.9167L79.1667 20.8333L72.0833 36.25L65.4167 34.1667L63.75 27.9167Z"
+                              fill="#996A0F"/>
+                    </svg>
+                </a></li>
             <li class="nav__listItem">
                 <a class="nav__link"
-                   href="../rose-des-vents/m02.html">Rose&#8239;des&#8239;vents</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../credits/m02.html">Crédits</a></li>
+                   href="../credits/m07.html">À propos</a></li>
         </ul>
     </nav>
+    <p class="copyright__accueil"><small>Richard Baillargeon @ Tous droits réservés 2021</small></p>
 </footer>
 </body>
 </html>
